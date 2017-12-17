@@ -92,8 +92,14 @@ namespace Taxi_Management_System
             }
         }
 
-        public void ViewClientHistory()
+        public void ViewClientHistory( string uname)
         {
+            int num_trips;
+            num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
+            for (int i = 0; i < num_trips; i++)
+            {
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i]);         
+            }
         }
     }
 }

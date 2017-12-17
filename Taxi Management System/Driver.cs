@@ -82,6 +82,14 @@ namespace Taxi_Management_System
             TempTrip.Date = DateTime.Today;
             DriverTrip_.Add(TempTrip);
         }
-
+        public void ViewdriverHistory(string uname)
+        {
+            int num_trips;
+            num_trips = DriverGlobals.DriverMap[uname].DriverTrip_.Count;
+            for (int i = 0; i < num_trips; i++)
+            {
+                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i]);
+            }
     }
+}
 }
