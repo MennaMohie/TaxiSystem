@@ -18,7 +18,7 @@ namespace Taxi_Management_System
     public class DriverTrip
     {
         public string ClientName;
-        public string Date;
+        public DateTime Date;
         public string From;
         public string To;
     }
@@ -74,6 +74,13 @@ namespace Taxi_Management_System
         //Recieving a request
         public void RecieveRequest(Driver FreeDriver_, Client Customer)
         {
+            DriverTrip TempTrip = new DriverTrip();
+            FreeDriver_.ChangeStatus(FreeDriver_.DriverUsername);
+            TempTrip.ClientName = Customer.ClientName;
+            TempTrip.From = "hakhodha mn textbox";
+            TempTrip.To = "hakhodha mn textbox ely taht ely foo'";
+            TempTrip.Date = DateTime.Today;
+            DriverTrip_.Add(TempTrip);
         }
 
     }

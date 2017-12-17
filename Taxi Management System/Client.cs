@@ -17,7 +17,7 @@ namespace Taxi_Management_System
     public class ClientTrip
     {
         public string DriverName;
-        public string Date;
+        public DateTime Date;
         public string From;
         public string To;
     }
@@ -29,10 +29,7 @@ namespace Taxi_Management_System
         public string ClientName;
         public string ClientID;
         public string ClientPassword;
-
-        //khaleha vector
         List<ClientTrip> ClientTrip_ = new List<ClientTrip>();
-
 
         //Functions
         //Filling the map of clients
@@ -69,9 +66,30 @@ namespace Taxi_Management_System
         {
         }
 
-        //Reserving a taxi
-        public void ReserveTaxi(Client Sender)
+        public void ReserveTaxi(Client Sender , string From_ , string To_ )
         {
+            ClientTrip TempTrip = new ClientTrip();
+            bool notFree = true;
+            while (notFree)
+            {
+                if (DriverGlobals.FreeDrivers.Peek().Status == "1")
+                {
+                    Console.WriteLine("Reservation is done!");
+                    Console.WriteLine("The Driver Name: " + DriverGlobals.FreeDrivers.Peek().DriverName);
+                    DriverGlobals.FreeDrivers.Peek().RecieveRequest(DriverGlobals.FreeDrivers.Peek(), Sender);
+                    TempTrip.DriverName = DriverGlobals.FreeDrivers.Peek().DriverName;
+                    TempTrip.From = From_;
+                    TempTrip.To = To_;
+                    TempTrip.Date = DateTime.Today; 
+                    ClientTrip_.Add(TempTrip);
+                    notFree = false;
+                    break;
+                }
+                else
+                {
+                    DriverGlobals.FreeDrivers.Dequeue();
+                }
+            }
         }
 
         public void ViewClientHistory()
