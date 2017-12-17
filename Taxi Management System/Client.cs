@@ -57,8 +57,18 @@ namespace Taxi_Management_System
         }
 
         //Client Registeration
-        public void ClientRegister()
+        public bool ClientRegister(Client Reg)
         {
+            if (ClientGlobals.ClientMap.ContainsKey(Reg.ClientUsername))
+            {
+                return false;
+            }
+            else
+            {
+                Reg.ClientID = ((ClientGlobals.ClientMap.Count) + 1).ToString();
+                ClientGlobals.ClientMap.Add(Reg.ClientUsername, Reg);
+                return true;
+            }
         }
 
         //Login Function for the client
