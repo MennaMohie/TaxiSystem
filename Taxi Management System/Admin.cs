@@ -39,7 +39,11 @@ namespace Taxi_Management_System
         {
             for (int i=0; i<AllTrips.Count; i++)
             {
-                Console.WriteLine(AllTrips[i]);
+                Console.WriteLine(AllTrips[i].ClientName);
+                Console.WriteLine(AllTrips[i].DriverName);
+                Console.WriteLine(AllTrips[i].From);
+                Console.WriteLine(AllTrips[i].To);
+                Console.WriteLine(AllTrips[i].thisday);
             }
         }
     }
