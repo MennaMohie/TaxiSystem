@@ -41,7 +41,7 @@
             this.UserNameLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameLabel.Location = new System.Drawing.Point(100, 133);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(112, 19);
+            this.UserNameLabel.Size = new System.Drawing.Size(137, 24);
             this.UserNameLabel.TabIndex = 0;
             this.UserNameLabel.Text = "USERNAME :";
             // 
@@ -51,7 +51,7 @@
             this.PasswordLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.Location = new System.Drawing.Point(100, 214);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(115, 19);
+            this.PasswordLabel.Size = new System.Drawing.Size(142, 24);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "PASSWORD :";
             // 
@@ -59,14 +59,14 @@
             // 
             this.usernametext.Location = new System.Drawing.Point(238, 132);
             this.usernametext.Name = "usernametext";
-            this.usernametext.Size = new System.Drawing.Size(207, 20);
+            this.usernametext.Size = new System.Drawing.Size(207, 24);
             this.usernametext.TabIndex = 2;
             // 
             // loginpasswordtext
             // 
             this.loginpasswordtext.Location = new System.Drawing.Point(238, 213);
             this.loginpasswordtext.Name = "loginpasswordtext";
-            this.loginpasswordtext.Size = new System.Drawing.Size(207, 20);
+            this.loginpasswordtext.Size = new System.Drawing.Size(207, 24);
             this.loginpasswordtext.TabIndex = 3;
             // 
             // button1
@@ -94,6 +94,7 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UserNameLabel);
             this.Name = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

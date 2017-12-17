@@ -158,6 +158,7 @@
     <Content Include="Resources\LogInButton.png" />
     <Content Include="Resources\taxibackground.jpg" />
     <Content Include="Resources\WhatsApp Image 2017-12-17 at 16.01.03.jpeg" />
+    <Content Include="Text Files\Admin.txt" />
     <Content Include="Text Files\Cars.txt" />
     <Content Include="Text Files\Clients.txt" />
     <Content Include="Text Files\Drivers.txt" />
