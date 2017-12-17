@@ -1,10 +1,10 @@
-mennaawad 648296 Menna 1 3000 0 mawad
-mennamohie 789123 Menna 2 3000 1 mmohie
-youssefmaghraby 569842 Youssef 3 3000 0 ymaghraby
-olaadel 693148 Ola 4 3000 0 oadel
-farahmohamed 695347 Farah 5 3000 1 fmohoamed
-emanalaa 695315 Eman Alaa 6 3000 0 ealaa
-nourhankhaled 148536 Nourhan 7 3000 1 nkhaled
-mainour 349618 Mai 8 3000 0 mnour
-mennamagdy 065795 Menna 9 3000 1 mmagdy
-mahmoudmohamed 124391 Mahmoud 10 3000 1 mmohamed
+mennaawad 648296 Menna Awad 1 3000 0
+mennamohie 789123 Menna Mohie 2 3000 1
+youssefmaghraby 569842 Youssef Maghraby 3 3000 0
+olaadel 693148 Ola Adel 4 3000 0
+farahmohamed 695347 Farah Mohamed 5 3000 1
+emanalaa 695315 Eman Alaa 6 3000 0
+nourhankhaled 148536 Nourhan Khaled 7 3000 1
+mainour 349618 Mai Nour 8 3000 0
+mennamagdy 065795 Menna Magdy 9 3000 1
+mahmoudmohamed 124391 Mahmoud Mohamed 10 3000 1

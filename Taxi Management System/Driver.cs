@@ -38,6 +38,26 @@ namespace Taxi_Management_System
         //Filling the map of drivers
         public bool FillDriverMap()
         {
+            StreamReader Stream = new StreamReader("Drivers.txt");
+
+            char[] Delimeters = { ' ', ',', '.', ':', '\t' };
+            string Line = Stream.ReadLine();
+            Driver tempDriver = new Driver();
+
+            while (Line != null)
+            {
+                string[] Words = Line.Split(Delimeters);
+
+                tempDriver.DriverUsername = Words[0];
+                tempDriver.DriverPassword = Words[1];
+                tempDriver.DriverName = Words[2] + ' ' + Words[3];
+                tempDriver.DriverID = Words[4];
+                tempDriver.Salary = Words[5];
+                tempDriver.Status = Words[6];
+
+                DriverGlobals.DriverMap[tempDriver.DriverUsername] = tempDriver;
+                
+            }
             return true;
         }
 
