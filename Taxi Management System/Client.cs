@@ -96,6 +96,7 @@ namespace Taxi_Management_System
             {
                 if (ClientGlobals.ClientMap[uname].ClientPassword == password )
                 {
+                    Login.currentClientUsername = uname;
                     Application.Run(new clientHome());
                 }
                 else
@@ -110,23 +111,25 @@ namespace Taxi_Management_System
             }
         }
 
-        public void ReserveTaxi(Client Sender , string From_ , string To_ )
+        public void ReserveTaxi(string clientUsername, string From_ , string To_ )
         {
             ClientTrip TempTrip = new ClientTrip();
-            bool notFree = true;
-            while (notFree)
+
+            string driverUsername;
+            while(DriverGlobals.FreeDrivers.Count!=0)
             {
-                if (DriverGlobals.DriverMap[Sender.ClientUsername].Status == "1")
+                driverUsername = DriverGlobals.FreeDrivers.Peek().DriverUsername;
+                if(DriverGlobals.DriverMap[driverUsername].Status=="1")
                 {
-                    Console.WriteLine("Reservation is done!");
-                    Console.WriteLine("The Driver Name: " + DriverGlobals.FreeDrivers.Peek().DriverName);
-                    DriverGlobals.FreeDrivers.Peek().RecieveRequest(DriverGlobals.FreeDrivers.Peek(), Sender);
+                    MessageBox.Show(@"Reservation complete.
+                                      The Driver's name: " + driverUsername + ".");
+                    DriverGlobals.FreeDrivers.Peek().RecieveRequest(DriverGlobals.FreeDrivers.Peek(), ClientGlobals.ClientMap[clientUsername]);
                     TempTrip.DriverName = DriverGlobals.FreeDrivers.Peek().DriverName;
                     TempTrip.From = From_;
                     TempTrip.To = To_;
-                    TempTrip.Date = DateTime.Today; 
+                    TempTrip.Date = DateTime.Today;
                     ClientTrip_.Add(TempTrip);
-                    notFree = false;
+                    DriverGlobals.FreeDrivers.Dequeue();
                     break;
                 }
                 else
@@ -142,7 +145,10 @@ namespace Taxi_Management_System
             num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
             for (int i = 0; i < num_trips; i++)
             {
-                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i]);         
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].DriverName);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].From);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].To);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].Date);
             }
         }
     }
