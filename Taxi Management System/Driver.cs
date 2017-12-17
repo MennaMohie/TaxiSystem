@@ -18,8 +18,8 @@ namespace Taxi_Management_System
 
     public class DriverTrip
     {
-        public string DriverTripID;
         public string ClientName;
+        public DateTime Date;
         public string From;
         public string To;
     }
@@ -33,7 +33,7 @@ namespace Taxi_Management_System
         public string CarID;
         public string Salary;
         public string Status;
-        Dictionary<string, DriverTrip> DriverTrip_ = new Dictionary<string, DriverTrip>();
+        List<DriverTrip> DriverTrip_ = new List<DriverTrip>();
 
         //Functions
         //Filling the map of drivers
@@ -99,7 +99,22 @@ namespace Taxi_Management_System
         //Recieving a request
         public void RecieveRequest(Driver FreeDriver_, Client Customer)
         {
+            DriverTrip TempTrip = new DriverTrip();
+            FreeDriver_.ChangeStatus(FreeDriver_.DriverUsername);
+            TempTrip.ClientName = Customer.ClientName;
+            TempTrip.From = "hakhodha mn textbox";
+            TempTrip.To = "hakhodha mn textbox ely taht ely foo'";
+            TempTrip.Date = DateTime.Today;
+            DriverTrip_.Add(TempTrip);
         }
-
+        public void ViewdriverHistory(string uname)
+        {
+            int num_trips;
+            num_trips = DriverGlobals.DriverMap[uname].DriverTrip_.Count;
+            for (int i = 0; i < num_trips; i++)
+            {
+                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i]);
+            }
     }
+}
 }

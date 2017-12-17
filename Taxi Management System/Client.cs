@@ -9,29 +9,28 @@ using System.Windows.Forms;
 
 namespace Taxi_Management_System
 {
+
+    public static class ClientGlobals
+    {
+        public static Dictionary<string, Client> ClientMap = new Dictionary<string, Client>();
+    }
+
+    public class ClientTrip
+    {
+        public string DriverName;
+        public DateTime Date;
+        public string From;
+        public string To;
+    }
+
     public class Client
     {
-        public static class ClientGlobals
-        {
-            public static Dictionary<string, Client> ClientMap = new Dictionary<string, Client>();
-        }
-
-        public class ClientTrip
-        {
-            public string ClientTripID;
-            public string DriverName;
-            public string From;
-            public string To;
-        }
 
         public string ClientUsername;
         public string ClientName;
         public string ClientID;
         public string ClientPassword;
-
-        //khaleha vector
-        Dictionary<string, ClientTrip> ClientTrip_ = new Dictionary<string, ClientTrip>();
-
+        List<ClientTrip> ClientTrip_ = new List<ClientTrip>();
 
         //Functions
         //Filling the map of clients
@@ -84,13 +83,40 @@ namespace Taxi_Management_System
             }
         }
 
-        //Reserving a taxi
-        public void ReserveTaxi(Client Sender)
+        public void ReserveTaxi(Client Sender , string From_ , string To_ )
         {
+            ClientTrip TempTrip = new ClientTrip();
+            bool notFree = true;
+            while (notFree)
+            {
+                if (DriverGlobals.DriverMap[Sender.ClientUsername].Status == "1")
+                {
+                    Console.WriteLine("Reservation is done!");
+                    Console.WriteLine("The Driver Name: " + DriverGlobals.FreeDrivers.Peek().DriverName);
+                    DriverGlobals.FreeDrivers.Peek().RecieveRequest(DriverGlobals.FreeDrivers.Peek(), Sender);
+                    TempTrip.DriverName = DriverGlobals.FreeDrivers.Peek().DriverName;
+                    TempTrip.From = From_;
+                    TempTrip.To = To_;
+                    TempTrip.Date = DateTime.Today; 
+                    ClientTrip_.Add(TempTrip);
+                    notFree = false;
+                    break;
+                }
+                else
+                {
+                    DriverGlobals.FreeDrivers.Dequeue();
+                }
+            }
         }
 
-        public void ViewClientHistory()
+        public void ViewClientHistory( string uname)
         {
+            int num_trips;
+            num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
+            for (int i = 0; i < num_trips; i++)
+            {
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i]);         
+            }
         }
     }
 }
