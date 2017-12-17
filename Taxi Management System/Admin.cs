@@ -78,6 +78,32 @@ namespace Taxi_Management_System
         {
             AllTrips.Add(Trip);
         }
+        public void AddNewCar(string PlateNumber, string Color, string Year, string Model)
+        {
+            if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
+                && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
+            {
+                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
+                {
+                    writer.Write(PlateNumber + " ");
+                    writer.Write(Color + " ");
+                    writer.Write(Year + " ");
+                    writer.WriteLine(Model);
+                    MessageBox.Show("car has been added successfully");
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes");
+
+            }
+
+
+
+        }
 
 
         public void viewtrips ()
