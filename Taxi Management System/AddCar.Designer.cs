@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.AddDriverbutton = new System.Windows.Forms.Button();
+            this.PlateNumber = new System.Windows.Forms.TextBox();
+            this.Color = new System.Windows.Forms.TextBox();
+            this.Year = new System.Windows.Forms.TextBox();
+            this.Model = new System.Windows.Forms.TextBox();
+            this.AddCarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,57 +75,58 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Model:";
             // 
-            // textBox1
+            // PlateNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 27);
-            this.textBox1.TabIndex = 4;
+            this.PlateNumber.Location = new System.Drawing.Point(244, 97);
+            this.PlateNumber.Name = "PlateNumber";
+            this.PlateNumber.Size = new System.Drawing.Size(154, 27);
+            this.PlateNumber.TabIndex = 4;
             // 
-            // textBox2
+            // Color
             // 
-            this.textBox2.Location = new System.Drawing.Point(244, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 27);
-            this.textBox2.TabIndex = 5;
+            this.Color.Location = new System.Drawing.Point(244, 157);
+            this.Color.Name = "Color";
+            this.Color.Size = new System.Drawing.Size(154, 27);
+            this.Color.TabIndex = 5;
             // 
-            // textBox3
+            // Year
             // 
-            this.textBox3.Location = new System.Drawing.Point(244, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 27);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.Year.Location = new System.Drawing.Point(244, 218);
+            this.Year.Name = "Year";
+            this.Year.Size = new System.Drawing.Size(154, 27);
+            this.Year.TabIndex = 6;
+            this.Year.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // Model
             // 
-            this.textBox4.Location = new System.Drawing.Point(244, 276);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 27);
-            this.textBox4.TabIndex = 7;
+            this.Model.Location = new System.Drawing.Point(244, 276);
+            this.Model.Name = "Model";
+            this.Model.Size = new System.Drawing.Size(154, 27);
+            this.Model.TabIndex = 7;
             // 
-            // AddDriverbutton
+            // AddCarButton
             // 
-            this.AddDriverbutton.BackColor = System.Drawing.Color.Black;
-            this.AddDriverbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddDriverbutton.ForeColor = System.Drawing.Color.White;
-            this.AddDriverbutton.Location = new System.Drawing.Point(229, 383);
-            this.AddDriverbutton.Name = "AddDriverbutton";
-            this.AddDriverbutton.Size = new System.Drawing.Size(120, 32);
-            this.AddDriverbutton.TabIndex = 8;
-            this.AddDriverbutton.Text = "Add";
-            this.AddDriverbutton.UseVisualStyleBackColor = false;
+            this.AddCarButton.BackColor = System.Drawing.Color.Black;
+            this.AddCarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCarButton.ForeColor = System.Drawing.Color.White;
+            this.AddCarButton.Location = new System.Drawing.Point(229, 383);
+            this.AddCarButton.Name = "AddCarButton";
+            this.AddCarButton.Size = new System.Drawing.Size(120, 32);
+            this.AddCarButton.TabIndex = 8;
+            this.AddCarButton.Text = "Add";
+            this.AddCarButton.UseVisualStyleBackColor = false;
+            this.AddCarButton.Click += new System.EventHandler(this.AddCarButton_Click);
             // 
             // AddCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.AddDriverbutton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AddCarButton);
+            this.Controls.Add(this.Model);
+            this.Controls.Add(this.Year);
+            this.Controls.Add(this.Color);
+            this.Controls.Add(this.PlateNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -145,10 +146,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button AddDriverbutton;
+        private System.Windows.Forms.TextBox PlateNumber;
+        private System.Windows.Forms.TextBox Color;
+        private System.Windows.Forms.TextBox Year;
+        private System.Windows.Forms.TextBox Model;
+        private System.Windows.Forms.Button AddCarButton;
     }
 }

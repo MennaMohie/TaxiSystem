@@ -73,6 +73,32 @@ namespace Taxi_Management_System
         {
             AllTrips.Add(Trip);
         }
+        public void AddNewCar(string PlateNumber, string Color, string Year, string Model)
+        {
+            if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
+                && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
+            {
+                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
+                {
+                    writer.Write(PlateNumber + " ");
+                    writer.Write(Color + " ");
+                    writer.Write(Year + " ");
+                    writer.WriteLine(Model);
+                    MessageBox.Show("car has been added successfully");
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes");
+
+            }
+
+
+
+        }
 
 
         public void viewtrips ()
@@ -85,6 +111,19 @@ namespace Taxi_Management_System
                 Console.WriteLine(AllTrips[i].To);
                 Console.WriteLine(AllTrips[i].thisday);
             }
+        }
+        public void addnewdriver (string uname,string password , string name , string driverid , string carid , string salary , string status)
+        {
+            Driver tempdriver=new Driver();
+            tempdriver.DriverUsername = uname;
+            tempdriver.DriverPassword = password;
+            tempdriver.DriverName = name;
+            tempdriver.DriverID = driverid;
+            tempdriver.CarID = carid;
+            tempdriver.Salary = salary;
+            tempdriver.Status = status;
+            DriverGlobals.DriverMap[uname] = tempdriver;
+
         }
     }
 }
