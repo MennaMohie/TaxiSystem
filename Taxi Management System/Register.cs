@@ -21,5 +21,19 @@ namespace Taxi_Management_System
         {
 
         }
+
+        private void signup_Click(object sender, EventArgs e)
+        {
+            Client Reg = new Client();
+            Reg.ClientUsername = UserNameTextBox.Text;
+            Reg.ClientName = NameTextBox.Text;
+            Reg.ClientPassword = PasswordTextBox.Text;
+
+            Reg.ClientRegister(Reg, ConfirmTextBox.Text);
+
+
+
+           
+        }
     }
 }
