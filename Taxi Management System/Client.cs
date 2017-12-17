@@ -82,7 +82,7 @@ namespace Taxi_Management_System
             bool notFree = true;
             while (notFree)
             {
-                if (DriverGlobals.FreeDrivers.Peek().Status == "1")
+                if (DriverGlobals.DriverMap[Sender.ClientUsername].Status == "1")
                 {
                     Console.WriteLine("Reservation is done!");
                     Console.WriteLine("The Driver Name: " + DriverGlobals.FreeDrivers.Peek().DriverName);
@@ -102,8 +102,14 @@ namespace Taxi_Management_System
             }
         }
 
-        public void ViewClientHistory()
+        public void ViewClientHistory( string uname)
         {
+            int num_trips;
+            num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
+            for (int i = 0; i < num_trips; i++)
+            {
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i]);         
+            }
         }
     }
 }
