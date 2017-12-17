@@ -55,6 +55,12 @@
     </Compile>
     <Compile Include="Car.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="clientHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientHome.Designer.cs">
+      <DependentUpon>clientHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driver-Home.cs">
       <SubType>Form</SubType>
     </Compile>

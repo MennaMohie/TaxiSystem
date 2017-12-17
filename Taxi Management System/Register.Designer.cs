@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.username = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.confirmpassword = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ConfirmTextBox = new System.Windows.Forms.TextBox();
             this.signup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,12 +50,12 @@
             this.username.TabIndex = 0;
             this.username.Text = "USERNAME :";
             // 
-            // textBox1
+            // NameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(251, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 20);
-            this.textBox1.TabIndex = 1;
+            this.NameTextBox.Location = new System.Drawing.Point(251, 83);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(262, 20);
+            this.NameTextBox.TabIndex = 1;
             // 
             // password
             // 
@@ -68,12 +68,12 @@
             this.password.TabIndex = 2;
             this.password.Text = "PASSWORD  :";
             // 
-            // textBox2
+            // UserNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(251, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 20);
-            this.textBox2.TabIndex = 3;
+            this.UserNameTextBox.Location = new System.Drawing.Point(251, 161);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(262, 20);
+            this.UserNameTextBox.TabIndex = 3;
             // 
             // confirmpassword
             // 
@@ -86,12 +86,12 @@
             this.confirmpassword.TabIndex = 4;
             this.confirmpassword.Text = "CONFIRM PASSWORD :";
             // 
-            // textBox3
+            // PasswordTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(251, 240);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 20);
-            this.textBox3.TabIndex = 5;
+            this.PasswordTextBox.Location = new System.Drawing.Point(251, 240);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(262, 20);
+            this.PasswordTextBox.TabIndex = 5;
             // 
             // name
             // 
@@ -104,12 +104,12 @@
             this.name.TabIndex = 6;
             this.name.Text = "NAME :";
             // 
-            // textBox4
+            // ConfirmTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(251, 314);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(262, 20);
-            this.textBox4.TabIndex = 7;
+            this.ConfirmTextBox.Location = new System.Drawing.Point(251, 314);
+            this.ConfirmTextBox.Name = "ConfirmTextBox";
+            this.ConfirmTextBox.Size = new System.Drawing.Size(262, 20);
+            this.ConfirmTextBox.TabIndex = 7;
             // 
             // signup
             // 
@@ -123,22 +123,22 @@
             this.signup.TabIndex = 8;
             this.signup.Text = "sign up";
             this.signup.UseVisualStyleBackColor = false;
+            this.signup.Click += new System.EventHandler(this.signup_Click);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.taxibackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.signup);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.ConfirmTextBox);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.confirmpassword);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.UserNameTextBox);
             this.Controls.Add(this.password);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.username);
             this.Name = "Register";
             this.Text = "Register";
@@ -151,13 +151,13 @@
         #endregion
 
         private System.Windows.Forms.Label username;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label password;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserNameTextBox;
         private System.Windows.Forms.Label confirmpassword;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label name;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ConfirmTextBox;
         private System.Windows.Forms.Button signup;
     }
 }
