@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.Windows.Forms;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Taxi_Management_System
 {
@@ -77,6 +72,32 @@ namespace Taxi_Management_System
         public void SendTripData(Admin.Trip Trip)
         {
             AllTrips.Add(Trip);
+        }
+        public void AddNewCar(string PlateNumber, string Color, string Year, string Model)
+        {
+            if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
+                && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
+            {
+                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
+                {
+                    writer.Write(PlateNumber + " ");
+                    writer.Write(Color + " ");
+                    writer.Write(Year + " ");
+                    writer.WriteLine(Model);
+                    MessageBox.Show("car has been added successfully");
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes");
+
+            }
+
+
+
         }
 
 
