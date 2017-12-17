@@ -58,8 +58,35 @@ namespace Taxi_Management_System
         }
 
         //Client Registeration
-        public void ClientRegister()
+        public void ClientRegister(Client Reg, string confirm)
         {
+            if (!string.IsNullOrEmpty(Reg.ClientName) && !string.IsNullOrEmpty(Reg.ClientUsername)
+                && !string.IsNullOrEmpty(Reg.ClientPassword) && !string.IsNullOrEmpty(confirm))
+            {
+                if (confirm == Reg.ClientPassword)
+                {
+                    if (ClientGlobals.ClientMap.ContainsKey(Reg.ClientUsername))
+                    {
+                        MessageBox.Show("used user name, please write another one");
+                    }
+                    else
+                    {
+                        Reg.ClientID = ((ClientGlobals.ClientMap.Count) + 1).ToString();
+                        ClientGlobals.ClientMap.Add(Reg.ClientUsername, Reg);
+                        MessageBox.Show("Registration Completed successfully");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Confirm password doesn’t match password ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes");
+            }
+
+            
         }
 
         //Login Function for the client
