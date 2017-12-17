@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.taxibackground;
+            //this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.taxibackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.signup);
