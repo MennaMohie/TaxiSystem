@@ -10,8 +10,9 @@
 
 namespace Taxi_Management_System.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -89,5 +90,8 @@ namespace Taxi_Management_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static Image WhatsApp_Image_2017_12_17_at_16_01_03 { get; internal set; }
+        public static Image taxibackground { get; internal set; }
     }
 }
