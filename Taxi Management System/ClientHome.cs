@@ -10,13 +10,20 @@ using System.Windows.Forms;
 
 namespace Taxi_Management_System
 {
-    public partial class Login_Register : Form
+    public partial class ClientHome : Form
     {
-        public Login_Register()
+        public ClientHome()
         {
             InitializeComponent();
+        }
 
-            
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClientHome_Load(object sender, EventArgs e)
+        {
 
         }
     }
