@@ -15,6 +15,9 @@ namespace Taxi_Management_System
         public Login_Register()
         {
             InitializeComponent();
+
+            
+
         }
     }
 }
