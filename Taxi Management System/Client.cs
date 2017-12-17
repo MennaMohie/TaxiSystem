@@ -8,20 +8,22 @@ using System.IO;
 
 namespace Taxi_Management_System
 {
+
+    public static class ClientGlobals
+    {
+        public static Dictionary<string, Client> ClientMap = new Dictionary<string, Client>();
+    }
+
+    public class ClientTrip
+    {
+        public string DriverName;
+        public string Date;
+        public string From;
+        public string To;
+    }
+
     public class Client
     {
-        public static class ClientGlobals
-        {
-            public static Dictionary<string, Client> ClientMap = new Dictionary<string, Client>();
-        }
-
-        public class ClientTrip
-        {
-            public string ClientTripID;
-            public string DriverName;
-            public string From;
-            public string To;
-        }
 
         public string ClientUsername;
         public string ClientName;
@@ -29,7 +31,7 @@ namespace Taxi_Management_System
         public string ClientPassword;
 
         //khaleha vector
-        Dictionary<string, ClientTrip> ClientTrip_ = new Dictionary<string, ClientTrip>();
+        List<ClientTrip> ClientTrip_ = new List<ClientTrip>();
 
 
         //Functions
