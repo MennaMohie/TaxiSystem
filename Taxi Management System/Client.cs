@@ -145,7 +145,10 @@ namespace Taxi_Management_System
             num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
             for (int i = 0; i < num_trips; i++)
             {
-                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i]);         
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].DriverName);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].From);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].To);
+                Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].Date);
             }
         }
     }
