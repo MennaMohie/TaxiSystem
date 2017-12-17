@@ -22,7 +22,7 @@ namespace Taxi_Management_System.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Taxi_Management_System.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Taxi_Management_System.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Taxi_Management_System.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Taxi_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_Register_Background {
+        public static System.Drawing.Bitmap Login_Register_Background {
             get {
                 object obj = ResourceManager.GetObject("Login-Register Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,9 +73,19 @@ namespace Taxi_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LogInButton {
+        public static System.Drawing.Bitmap LogInButton {
             get {
                 object obj = ResourceManager.GetObject("LogInButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WhatsApp_Image_2017_12_17_at_16_01_03 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2017_12_17_at_16_01_03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
