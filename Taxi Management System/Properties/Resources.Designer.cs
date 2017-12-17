@@ -73,9 +73,9 @@ namespace Taxi_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap LogInButton {
+        public static System.Drawing.Bitmap LogInBackground {
             get {
-                object obj = ResourceManager.GetObject("LogInButton", resourceCulture);
+                object obj = ResourceManager.GetObject("LogInBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Taxi_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap WhatsApp_Image_2017_12_17_at_16_01_03 {
+        public static System.Drawing.Bitmap LogInButton {
             get {
-                object obj = ResourceManager.GetObject("WhatsApp_Image_2017_12_17_at_16_01_03", resourceCulture);
+                object obj = ResourceManager.GetObject("LogInButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
