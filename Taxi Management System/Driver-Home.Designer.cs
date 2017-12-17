@@ -39,10 +39,9 @@
             this.buttonDriverViewTrips.BackColor = System.Drawing.Color.Black;
             this.buttonDriverViewTrips.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverViewTrips.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDriverViewTrips.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverViewTrips.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDriverViewTrips.ForeColor = System.Drawing.Color.Gold;
-            this.buttonDriverViewTrips.Location = new System.Drawing.Point(55, 58);
+            this.buttonDriverViewTrips.ForeColor = System.Drawing.Color.White;
+            this.buttonDriverViewTrips.Location = new System.Drawing.Point(43, 69);
             this.buttonDriverViewTrips.Name = "buttonDriverViewTrips";
             this.buttonDriverViewTrips.Size = new System.Drawing.Size(258, 100);
             this.buttonDriverViewTrips.TabIndex = 0;
@@ -55,10 +54,9 @@
             this.buttonDriverChangeStatus.BackColor = System.Drawing.Color.Black;
             this.buttonDriverChangeStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverChangeStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDriverChangeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverChangeStatus.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDriverChangeStatus.ForeColor = System.Drawing.Color.Gold;
-            this.buttonDriverChangeStatus.Location = new System.Drawing.Point(58, 184);
+            this.buttonDriverChangeStatus.ForeColor = System.Drawing.Color.White;
+            this.buttonDriverChangeStatus.Location = new System.Drawing.Point(43, 194);
             this.buttonDriverChangeStatus.Name = "buttonDriverChangeStatus";
             this.buttonDriverChangeStatus.Size = new System.Drawing.Size(255, 100);
             this.buttonDriverChangeStatus.TabIndex = 2;
@@ -70,10 +68,9 @@
             this.buttonDriverAvailableRequests.BackColor = System.Drawing.Color.Black;
             this.buttonDriverAvailableRequests.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverAvailableRequests.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDriverAvailableRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverAvailableRequests.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDriverAvailableRequests.ForeColor = System.Drawing.Color.Gold;
-            this.buttonDriverAvailableRequests.Location = new System.Drawing.Point(58, 310);
+            this.buttonDriverAvailableRequests.ForeColor = System.Drawing.Color.White;
+            this.buttonDriverAvailableRequests.Location = new System.Drawing.Point(43, 318);
             this.buttonDriverAvailableRequests.Name = "buttonDriverAvailableRequests";
             this.buttonDriverAvailableRequests.Size = new System.Drawing.Size(255, 100);
             this.buttonDriverAvailableRequests.TabIndex = 3;
@@ -91,7 +88,8 @@
             this.Controls.Add(this.buttonDriverChangeStatus);
             this.Controls.Add(this.buttonDriverViewTrips);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Driver_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
