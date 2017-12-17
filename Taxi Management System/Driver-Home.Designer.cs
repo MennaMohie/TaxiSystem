@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Driver_Home));
             this.buttonDriverViewTrips = new System.Windows.Forms.Button();
             this.buttonDriverChangeStatus = new System.Windows.Forms.Button();
-            this.buttonDriverAvailableRequests = new System.Windows.Forms.Button();
+            this.buttonDriverRequests = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonDriverViewTrips
@@ -63,19 +63,19 @@
             this.buttonDriverChangeStatus.Text = "Change Status";
             this.buttonDriverChangeStatus.UseVisualStyleBackColor = false;
             // 
-            // buttonDriverAvailableRequests
+            // buttonDriverRequests
             // 
-            this.buttonDriverAvailableRequests.BackColor = System.Drawing.Color.Black;
-            this.buttonDriverAvailableRequests.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDriverAvailableRequests.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDriverAvailableRequests.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDriverAvailableRequests.ForeColor = System.Drawing.Color.White;
-            this.buttonDriverAvailableRequests.Location = new System.Drawing.Point(43, 318);
-            this.buttonDriverAvailableRequests.Name = "buttonDriverAvailableRequests";
-            this.buttonDriverAvailableRequests.Size = new System.Drawing.Size(255, 100);
-            this.buttonDriverAvailableRequests.TabIndex = 3;
-            this.buttonDriverAvailableRequests.Text = "Available Requests";
-            this.buttonDriverAvailableRequests.UseVisualStyleBackColor = false;
+            this.buttonDriverRequests.BackColor = System.Drawing.Color.Black;
+            this.buttonDriverRequests.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDriverRequests.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDriverRequests.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDriverRequests.ForeColor = System.Drawing.Color.White;
+            this.buttonDriverRequests.Location = new System.Drawing.Point(43, 318);
+            this.buttonDriverRequests.Name = "buttonDriverRequests";
+            this.buttonDriverRequests.Size = new System.Drawing.Size(255, 100);
+            this.buttonDriverRequests.TabIndex = 3;
+            this.buttonDriverRequests.Text = "Available Requests";
+            this.buttonDriverRequests.UseVisualStyleBackColor = false;
             // 
             // Driver_Home
             // 
@@ -84,7 +84,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(813, 642);
-            this.Controls.Add(this.buttonDriverAvailableRequests);
+            this.Controls.Add(this.buttonDriverRequests);
             this.Controls.Add(this.buttonDriverChangeStatus);
             this.Controls.Add(this.buttonDriverViewTrips);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,6 +102,6 @@
 
         private System.Windows.Forms.Button buttonDriverViewTrips;
         private System.Windows.Forms.Button buttonDriverChangeStatus;
-        private System.Windows.Forms.Button buttonDriverAvailableRequests;
+        private System.Windows.Forms.Button buttonDriverRequests;
     }
 }
