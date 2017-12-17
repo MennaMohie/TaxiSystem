@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Collections;
+using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Taxi_Management_System
 {
@@ -28,13 +36,50 @@ namespace Taxi_Management_System
 
         public bool FillAdminMap()
         {
+            StreamReader Stream = new StreamReader("Clients.txt");
+
+            char[] Delimeters = { ' ', ',', '.', ':', '\t' };
+            string Line = Stream.ReadLine();
+            Admin TempAdmin = new Admin();
+
+            while (Line != null)
+            {
+                string[] Words = Line.Split(Delimeters);
+
+                TempAdmin.AdminName = Words[0];
+                TempAdmin.AdminPassword = Words[0];
+
+                AdminGlobals.AdminMap[TempAdmin.AdminName] = TempAdmin;
+
+            }
             return true;
+        }
+
+        public void AdminLogin(string uname, string password)
+        {
+            if (AdminGlobals.AdminMap.ContainsKey(uname))
+            {
+                if (AdminGlobals.AdminMap[uname].AdminPassword == password)
+                {
+                    Application.Run(new AdminHome());
+                }
+                else
+                {
+                    MessageBox.Show("Either username or password is incorrent, please try again.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You are not a registered driver, please contact an admin to register.");
+            }
         }
 
         public void SendTripData(Admin.Trip Trip)
         {
             AllTrips.Add(Trip);
         }
+
+
         public void viewtrips ()
         {
             for (int i=0; i<AllTrips.Count; i++)
