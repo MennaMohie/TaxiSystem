@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Taxi_Management_System
 {
-    class Car
+    public class Car
     {
+        public static class CarGlobals
+        {
+            public static Dictionary<string, Car> CarMap = new Dictionary<string, Car>();
+        }
+
+        public bool FillCarMap()
+        {
+            return true;
+        }
     }
+
 }
