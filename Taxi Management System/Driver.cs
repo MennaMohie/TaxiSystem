@@ -19,7 +19,6 @@ namespace Taxi_Management_System
     public class DriverTrip
     {
         public string ClientName;
-        public string DriverName;
         public DateTime Date;
         public string From;
         public string To;
