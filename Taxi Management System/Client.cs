@@ -72,7 +72,7 @@ namespace Taxi_Management_System
             bool notFree = true;
             while (notFree)
             {
-                if (DriverGlobals.FreeDrivers.Peek().Status == "1")
+                if (DriverGlobals.DriverMap[Sender.ClientUsername].Status == "1")
                 {
                     Console.WriteLine("Reservation is done!");
                     Console.WriteLine("The Driver Name: " + DriverGlobals.FreeDrivers.Peek().DriverName);
