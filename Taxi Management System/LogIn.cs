@@ -15,6 +15,12 @@ namespace Taxi_Management_System
         public Login()
         {
             InitializeComponent();
+            this.UserNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(179)))), ((int)(((byte)(22)))));
+            this.PasswordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(179)))), ((int)(((byte)(22)))));
+
+
         }
+
+
     }
 }
