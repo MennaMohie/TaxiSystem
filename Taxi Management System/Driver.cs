@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
+using System.Windows.Forms;
 
 
 namespace Taxi_Management_System
@@ -64,11 +65,35 @@ namespace Taxi_Management_System
         //Login Function for the driver
         public void DriverLogin(string uname, string password)
         {
+            if (DriverGlobals.DriverMap.ContainsKey(uname))
+            {
+                if(DriverGlobals.DriverMap[uname].DriverPassword == password)
+                {
+                    Application.Run(new Driver_Home());
+                }
+                else
+                {
+                    MessageBox.Show("Either username or password is incorrent, please try again.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You are not a registered driver, please contact an admin to register.");
+            }
         }
-        //Function to change the Driver Status
 
+        //Function to change the Driver Status
         public void ChangeStatus(string name)
         {
+            if (DriverGlobals.DriverMap[name].Status == "0")
+            {
+                DriverGlobals.DriverMap[name].Status = "1";
+                DriverGlobals.FreeDrivers.Enqueue(DriverGlobals.DriverMap[name]);
+            }
+            else
+            {
+                DriverGlobals.DriverMap[name].Status = "0";
+            }
         }
 
         //Recieving a request
