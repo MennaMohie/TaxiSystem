@@ -1,0 +1,10 @@
+1 100000 Black 2007 Verna 
+2 100001 Red 2010 Honda
+3 100002 Yellow 1999 Hyundai
+4 100003 Blue 2001 Lanos
+5 100004 Green 2017 Nissan
+6 100005 Orange 2003 Verna
+7 100006 Brown 2001 Hyundai
+8 100007 White 2002 Chevrolet
+9 100008 Gold 2005 Mercedes
+10 100009 Black 2018 BMW

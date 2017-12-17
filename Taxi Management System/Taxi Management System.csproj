@@ -46,18 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Driver-Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Driver-Home.Designer.cs">
       <DependentUpon>Driver-Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driver.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +134,9 @@
     <Content Include="Resources\LogInButton.png" />
     <Content Include="Resources\taxibackground.jpg" />
     <Content Include="Resources\WhatsApp Image 2017-12-17 at 16.01.03.jpeg" />
+    <Content Include="Text Files\Cars.txt" />
+    <Content Include="Text Files\Clients.txt" />
+    <Content Include="Text Files\Drivers.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
