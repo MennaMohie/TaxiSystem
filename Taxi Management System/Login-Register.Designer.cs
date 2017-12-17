@@ -35,7 +35,6 @@
             // LogInButton
             // 
             this.LogInButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LogInButton.FlatAppearance.BorderSize = 0;
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -49,7 +48,6 @@
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SignUpButton.FlatAppearance.BorderSize = 0;
             this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
