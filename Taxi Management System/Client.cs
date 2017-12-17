@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Taxi_Management_System
 {
@@ -57,24 +58,29 @@ namespace Taxi_Management_System
         }
 
         //Client Registeration
-        public bool ClientRegister(Client Reg)
+        public void ClientRegister()
         {
-            if (ClientGlobals.ClientMap.ContainsKey(Reg.ClientUsername))
-            {
-                return false;
-            }
-            else
-            {
-                Reg.ClientID = ((ClientGlobals.ClientMap.Count) + 1).ToString();
-                ClientGlobals.ClientMap.Add(Reg.ClientUsername, Reg);
-                return true;
-            }
         }
 
         //Login Function for the client
         public void ClientLogin(string uname, string password)
         {
-            
+            if (ClientGlobals.ClientMap.ContainsKey(uname))
+            {
+                if (ClientGlobals.ClientMap[uname].ClientPassword == password )
+                {
+                    Application.Run(new clientHome());
+                }
+                else
+                {
+                    MessageBox.Show("Username or password incorrect, please try again.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("User doesn't exist, please register.");
+                Application.Run(new Register());
+            }
         }
 
         public void ReserveTaxi(Client Sender , string From_ , string To_ )
