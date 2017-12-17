@@ -19,6 +19,7 @@ namespace Taxi_Management_System
     public class DriverTrip
     {
         public string ClientName;
+        public string DriverName;
         public DateTime Date;
         public string From;
         public string To;
@@ -106,7 +107,19 @@ namespace Taxi_Management_System
             TempTrip.To = "hakhodha mn textbox ely taht ely foo'";
             TempTrip.Date = DateTime.Today;
             DriverTrip_.Add(TempTrip);
+
+            //////////////////////////Send trip data to the admin List
+            Admin.Trip TempTripp = new Admin.Trip();
+            TempTripp.DriverName = FreeDriver_.DriverName;
+            TempTripp.ClientName = TempTrip.ClientName;
+            TempTripp.From = TempTrip.From;
+            TempTripp.To = TempTrip.To;
+            TempTripp.thisday = TempTrip.Date;
+
+            Admin TempAdmin = new Admin();
+            TempAdmin.SendTripData(TempTripp);
         }
+
         public void ViewdriverHistory(string uname)
         {
             int num_trips;
