@@ -36,6 +36,24 @@ namespace Taxi_Management_System
         //Filling the map of clients
         public bool FillCientMap()
         {
+            StreamReader Stream = new StreamReader("Clients.txt");
+
+            char[] Delimeters = { ' ', ',', '.', ':', '\t' };
+            string Line = Stream.ReadLine();
+            Client tempClient = new Client();
+
+            while(Line!= null)
+            {
+                string[] Words = Line.Split(Delimeters);
+
+                tempClient.ClientUsername = Words[0];
+                tempClient.ClientName = Words[1] + ' ' + Words[2];
+                tempClient.ClientID = Words[3];
+                tempClient.ClientPassword = Words[4];
+
+                ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;    
+            }
+
             return true;
         }
 
