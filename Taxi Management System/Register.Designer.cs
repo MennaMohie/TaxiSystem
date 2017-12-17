@@ -121,7 +121,7 @@
             this.signup.Name = "signup";
             this.signup.Size = new System.Drawing.Size(133, 46);
             this.signup.TabIndex = 8;
-            this.signup.Text = "sign up";
+            this.signup.Text = "Sign Up";
             this.signup.UseVisualStyleBackColor = false;
             this.signup.Click += new System.EventHandler(this.signup_Click);
             // 
