@@ -29,5 +29,10 @@ namespace Taxi_Management_System
         {
 
         }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
