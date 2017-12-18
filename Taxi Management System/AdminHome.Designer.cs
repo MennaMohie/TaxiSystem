@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
             this.buttonAddNewDriver = new System.Windows.Forms.Button();
             this.buttonAddNewCar = new System.Windows.Forms.Button();
             this.buttonViewReports = new System.Windows.Forms.Button();
@@ -74,9 +75,9 @@
             // 
             // AdminHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.WhatsApp_Image_2017_12_17_at_16_01_03;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.buttonViewReports);

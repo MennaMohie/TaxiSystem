@@ -45,7 +45,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(93, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
+            this.label1.Size = new System.Drawing.Size(149, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "PLATE NUMBER: ";
             // 
@@ -55,7 +55,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(93, 187);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 24);
+            this.label2.Size = new System.Drawing.Size(71, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "COLOR:";
             // 
@@ -65,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(93, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 24);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "YEAR:";
             // 
@@ -75,7 +75,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(93, 318);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 24);
+            this.label4.Size = new System.Drawing.Size(72, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "MODEL:";
             // 
@@ -83,21 +83,21 @@
             // 
             this.textBoxcarnumber.Location = new System.Drawing.Point(279, 118);
             this.textBoxcarnumber.Name = "textBoxcarnumber";
-            this.textBoxcarnumber.Size = new System.Drawing.Size(276, 32);
+            this.textBoxcarnumber.Size = new System.Drawing.Size(276, 27);
             this.textBoxcarnumber.TabIndex = 4;
             // 
             // textBoxcarcolor
             // 
             this.textBoxcarcolor.Location = new System.Drawing.Point(187, 184);
             this.textBoxcarcolor.Name = "textBoxcarcolor";
-            this.textBoxcarcolor.Size = new System.Drawing.Size(368, 32);
+            this.textBoxcarcolor.Size = new System.Drawing.Size(368, 27);
             this.textBoxcarcolor.TabIndex = 5;
             // 
             // textBoxcaryear
             // 
             this.textBoxcaryear.Location = new System.Drawing.Point(170, 249);
             this.textBoxcaryear.Name = "textBoxcaryear";
-            this.textBoxcaryear.Size = new System.Drawing.Size(385, 32);
+            this.textBoxcaryear.Size = new System.Drawing.Size(385, 27);
             this.textBoxcaryear.TabIndex = 6;
             this.textBoxcaryear.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -105,7 +105,7 @@
             // 
             this.textBoxcarmodel.Location = new System.Drawing.Point(187, 315);
             this.textBoxcarmodel.Name = "textBoxcarmodel";
-            this.textBoxcarmodel.Size = new System.Drawing.Size(368, 32);
+            this.textBoxcarmodel.Size = new System.Drawing.Size(368, 27);
             this.textBoxcarmodel.TabIndex = 7;
             // 
             // AddDriverbutton
@@ -122,7 +122,7 @@
             // 
             // AddCar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
