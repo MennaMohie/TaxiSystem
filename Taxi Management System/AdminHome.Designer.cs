@@ -52,7 +52,7 @@
             this.buttonAddNewCar.BackColor = System.Drawing.Color.Black;
             this.buttonAddNewCar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddNewCar.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewCar.Location = new System.Drawing.Point(24, 242);
+            this.buttonAddNewCar.Location = new System.Drawing.Point(24, 122);
             this.buttonAddNewCar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonAddNewCar.Name = "buttonAddNewCar";
             this.buttonAddNewCar.Size = new System.Drawing.Size(255, 90);
@@ -65,7 +65,7 @@
             this.buttonViewReports.BackColor = System.Drawing.Color.Black;
             this.buttonViewReports.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonViewReports.ForeColor = System.Drawing.Color.White;
-            this.buttonViewReports.Location = new System.Drawing.Point(24, 134);
+            this.buttonViewReports.Location = new System.Drawing.Point(24, 220);
             this.buttonViewReports.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonViewReports.Name = "buttonViewReports";
             this.buttonViewReports.Size = new System.Drawing.Size(255, 90);
