@@ -111,6 +111,7 @@
             // AddDriverbutton
             // 
             this.AddDriverbutton.BackColor = System.Drawing.Color.Black;
+            this.AddDriverbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddDriverbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDriverbutton.ForeColor = System.Drawing.Color.White;
             this.AddDriverbutton.Location = new System.Drawing.Point(401, 387);

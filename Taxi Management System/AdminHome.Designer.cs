@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.WhatsApp_Image_2017_12_17_at_16_01_03;
+            //this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.WhatsApp_Image_2017_12_17_at_16_01_03;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.buttonViewReports);

@@ -122,6 +122,7 @@
             // signup
             // 
             this.signup.BackColor = System.Drawing.Color.Black;
+            this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signup.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup.ForeColor = System.Drawing.Color.White;
             this.signup.Location = new System.Drawing.Point(422, 412);
