@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientHome));
             this.buttonClientRequest = new System.Windows.Forms.Button();
             this.Viewtripsbuttonclient = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,6 +45,7 @@
             this.buttonClientRequest.TabIndex = 1;
             this.buttonClientRequest.Text = "Request Taxi";
             this.buttonClientRequest.UseVisualStyleBackColor = false;
+            this.buttonClientRequest.Click += new System.EventHandler(this.buttonClientRequest_Click);
             // 
             // Viewtripsbuttonclient
             // 
@@ -60,12 +60,12 @@
             this.Viewtripsbuttonclient.TabIndex = 2;
             this.Viewtripsbuttonclient.Text = "View Trips";
             this.Viewtripsbuttonclient.UseVisualStyleBackColor = false;
+            this.Viewtripsbuttonclient.Click += new System.EventHandler(this.Viewtripsbuttonclient_Click);
             // 
             // clientHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.Viewtripsbuttonclient);
             this.Controls.Add(this.buttonClientRequest);

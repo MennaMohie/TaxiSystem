@@ -70,12 +70,16 @@
             this.loginpasswordtext.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginpasswordtext.Location = new System.Drawing.Point(290, 263);
             this.loginpasswordtext.Name = "loginpasswordtext";
+            this.loginpasswordtext.PasswordChar = '*';
             this.loginpasswordtext.Size = new System.Drawing.Size(245, 32);
             this.loginpasswordtext.TabIndex = 3;
             // 
             // LogInButton
             // 
             this.LogInButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LogInButton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.LogInButton.Location = new System.Drawing.Point(407, 364);

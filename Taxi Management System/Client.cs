@@ -36,13 +36,15 @@ namespace Taxi_Management_System
         //Filling the map of clients
         public bool FillCientMap()
         {
-            StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
+
+            //StreamReader Stream = new StreamReader("Clients.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Client tempClient = new Client();
-
-            while(Line!= null)
+           
+            while(!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -51,8 +53,11 @@ namespace Taxi_Management_System
                 tempClient.ClientID = Words[3];
                 tempClient.ClientPassword = Words[4];
 
-                ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;    
+                ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;
+
+                Line = Stream.ReadLine();
             }
+            
 
             return true;
         }
@@ -96,8 +101,9 @@ namespace Taxi_Management_System
             {
                 if (ClientGlobals.ClientMap[uname].ClientPassword == password )
                 {
-                    Login.currentUsername = uname;
-                    Application.Run(new clientHome());
+                    Program.client.ClientUsername = uname;
+                    clientHome ClientHome = new clientHome();
+                    ClientHome.Show();               
                 }
                 else
                 {
@@ -107,7 +113,8 @@ namespace Taxi_Management_System
             else
             {
                 MessageBox.Show("User doesn't exist, please register.");
-                Application.Run(new Register());
+                Register r = new Register();
+                r.Show();
             }
         }
 

@@ -40,13 +40,15 @@ namespace Taxi_Management_System
         //Filling the map of drivers
         public bool FillDriverMap()
         {
-            StreamReader Stream = new StreamReader("Drivers.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
+
+            //StreamReader Stream = new StreamReader("Drivers.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Driver tempDriver = new Driver();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -58,7 +60,9 @@ namespace Taxi_Management_System
                 tempDriver.Status = Words[6];
 
                 DriverGlobals.DriverMap[tempDriver.DriverUsername] = tempDriver;
-                
+
+                Line = Stream.ReadLine();
+
             }
             return true;
         }

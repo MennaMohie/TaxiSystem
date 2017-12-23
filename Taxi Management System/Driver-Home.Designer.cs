@@ -39,6 +39,7 @@
             this.buttonDriverViewTrips.BackColor = System.Drawing.Color.Black;
             this.buttonDriverViewTrips.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverViewTrips.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDriverViewTrips.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverViewTrips.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverViewTrips.ForeColor = System.Drawing.Color.White;
             this.buttonDriverViewTrips.Location = new System.Drawing.Point(23, 23);
@@ -54,6 +55,7 @@
             this.buttonDriverChangeStatus.BackColor = System.Drawing.Color.Black;
             this.buttonDriverChangeStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverChangeStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDriverChangeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverChangeStatus.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverChangeStatus.ForeColor = System.Drawing.Color.White;
             this.buttonDriverChangeStatus.Location = new System.Drawing.Point(23, 136);
@@ -68,6 +70,7 @@
             this.buttonDriverRequests.BackColor = System.Drawing.Color.Black;
             this.buttonDriverRequests.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriverRequests.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDriverRequests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDriverRequests.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverRequests.ForeColor = System.Drawing.Color.White;
             this.buttonDriverRequests.Location = new System.Drawing.Point(23, 250);
@@ -88,7 +91,6 @@
             this.Controls.Add(this.buttonDriverChangeStatus);
             this.Controls.Add(this.buttonDriverViewTrips);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Driver_Home";

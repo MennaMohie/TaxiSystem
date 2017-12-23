@@ -37,6 +37,7 @@
             this.LogInButton.BackColor = System.Drawing.Color.Black;
             this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LogInButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.Color.White;
             this.LogInButton.Location = new System.Drawing.Point(432, 179);
@@ -53,6 +54,7 @@
             this.SignUpButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignUpButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignUpButton.Location = new System.Drawing.Point(432, 315);

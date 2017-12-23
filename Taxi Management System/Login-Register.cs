@@ -12,12 +12,15 @@ namespace Taxi_Management_System
 {
     public partial class Login_Register : Form
     {
+        
+
         public Login_Register()
         {
             InitializeComponent();
 
-            
-
+            client.FillCientMap();
+            driver.FillDriverMap();
+            car.FillCarMap();
         }
 
         private void LogInButton_Click(object sender, EventArgs e)
