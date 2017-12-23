@@ -69,10 +69,12 @@ namespace Taxi_Management_System
                 if(DriverGlobals.DriverMap[uname].DriverPassword == password)
                 {
                     Login.currentUsername = uname;
-                    Application.Run(new Driver_Home());
+                      Login.isDriver = true;
+                    Login.notregisterd = false;
                 }
                 else
                 {
+                    Login.notregisterd = false;
                     MessageBox.Show("Either username or password is incorrent, please try again.");
                 }
             }

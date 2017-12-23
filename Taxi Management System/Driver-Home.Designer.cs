@@ -64,6 +64,7 @@
             this.buttonDriverChangeStatus.TabIndex = 2;
             this.buttonDriverChangeStatus.Text = "Change Status";
             this.buttonDriverChangeStatus.UseVisualStyleBackColor = false;
+            this.buttonDriverChangeStatus.Click += new System.EventHandler(this.buttonDriverChangeStatus_Click);
             // 
             // buttonDriverRequests
             // 
@@ -79,10 +80,11 @@
             this.buttonDriverRequests.TabIndex = 3;
             this.buttonDriverRequests.Text = "Available Requests";
             this.buttonDriverRequests.UseVisualStyleBackColor = false;
+            this.buttonDriverRequests.Click += new System.EventHandler(this.buttonDriverRequests_Click);
             // 
             // Driver_Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
