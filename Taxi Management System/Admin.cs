@@ -117,7 +117,7 @@ namespace Taxi_Management_System
             tempdriver.DriverPassword = password;
             tempdriver.DriverName = name;
             tempdriver.DriverID = driverid;
-            tempdriver.Carplatenumber = carplatenumber;
+            tempdriver.CarID = carplatenumber;
             tempdriver.Salary = salary;
             tempdriver.Status = status;
             DriverGlobals.DriverMap[uname] = tempdriver;
