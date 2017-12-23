@@ -73,6 +73,12 @@
     <Compile Include="clientHome.Designer.cs">
       <DependentUpon>clientHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTrips.Designer.cs">
+      <DependentUpon>ClientTrips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driver-Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clientHome.resx">
       <DependentUpon>clientHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTrips.resx">
+      <DependentUpon>ClientTrips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driver-Home.resx">
       <DependentUpon>Driver-Home.cs</DependentUpon>
