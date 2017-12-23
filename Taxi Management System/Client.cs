@@ -54,10 +54,6 @@ namespace Taxi_Management_System
                 ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;
 
                 Line = Stream.ReadLine();
-
-                MessageBox.Show("READING CLIENT: " + tempClient.ClientUsername);
-                if (string.IsNullOrWhiteSpace(Line))
-                    MessageBox.Show("NULL");
             }
             
 

@@ -37,7 +37,7 @@ namespace Taxi_Management_System
             string Line = Stream.ReadLine();
             Admin TempAdmin = new Admin();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -45,6 +45,8 @@ namespace Taxi_Management_System
                 TempAdmin.AdminPassword = Words[0];
 
                 AdminGlobals.AdminMap[TempAdmin.AdminName] = TempAdmin;
+
+                Line = Stream.ReadLine();
 
             }
             return true;
@@ -86,18 +88,12 @@ namespace Taxi_Management_System
                     writer.WriteLine(Model);
                     MessageBox.Show("car has been added successfully");
                 }
-
-
-
             }
             else
             {
                 MessageBox.Show("Please fill the empty text boxes");
 
             }
-
-
-
         }
 
 

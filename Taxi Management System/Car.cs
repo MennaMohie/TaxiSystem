@@ -29,7 +29,7 @@ namespace Taxi_Management_System
             string Line = Stream.ReadLine();
             Car tempCar = new Car();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -39,7 +39,8 @@ namespace Taxi_Management_System
                 tempCar.Model = Words[3];
 
                 CarGlobals.CarMap[tempCar.PlateNumber] = tempCar;
-                
+                Line = Stream.ReadLine();
+
             }
             return true;
         }
