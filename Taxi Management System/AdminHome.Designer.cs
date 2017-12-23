@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
             this.buttonAddNewDriver = new System.Windows.Forms.Button();
             this.buttonAddNewCar = new System.Windows.Forms.Button();
             this.buttonViewReports = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.buttonAddNewCar.BackColor = System.Drawing.Color.Black;
             this.buttonAddNewCar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddNewCar.ForeColor = System.Drawing.Color.White;
-            this.buttonAddNewCar.Location = new System.Drawing.Point(24, 242);
+            this.buttonAddNewCar.Location = new System.Drawing.Point(24, 122);
             this.buttonAddNewCar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonAddNewCar.Name = "buttonAddNewCar";
             this.buttonAddNewCar.Size = new System.Drawing.Size(255, 90);
@@ -64,7 +65,7 @@
             this.buttonViewReports.BackColor = System.Drawing.Color.Black;
             this.buttonViewReports.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonViewReports.ForeColor = System.Drawing.Color.White;
-            this.buttonViewReports.Location = new System.Drawing.Point(24, 134);
+            this.buttonViewReports.Location = new System.Drawing.Point(24, 220);
             this.buttonViewReports.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonViewReports.Name = "buttonViewReports";
             this.buttonViewReports.Size = new System.Drawing.Size(255, 90);
@@ -74,9 +75,9 @@
             // 
             // AdminHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.WhatsApp_Image_2017_12_17_at_16_01_03;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.buttonViewReports);
