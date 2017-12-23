@@ -130,6 +130,6 @@ namespace Taxi_Management_System
                 Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].To);
                 Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].Date);
             }
+        }
     }
-}
 }
