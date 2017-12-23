@@ -86,6 +86,12 @@
       <DependentUpon>Driver-Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver.cs" />
+    <Compile Include="DriverTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverTrips.Designer.cs">
+      <DependentUpon>DriverTrips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driver-Home.resx">
       <DependentUpon>Driver-Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverTrips.resx">
+      <DependentUpon>DriverTrips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login-Register.resx">
       <DependentUpon>Login-Register.cs</DependentUpon>

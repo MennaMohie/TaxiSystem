@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.Windows.Forms;
+using System.Data;
 
 
 namespace Taxi_Management_System
@@ -73,6 +74,7 @@ namespace Taxi_Management_System
             {
                 if(DriverGlobals.DriverMap[uname].DriverPassword == password)
                 {
+                    Login.currentUsername = uname;
                     Application.Run(new Driver_Home());
                 }
                 else
@@ -84,6 +86,7 @@ namespace Taxi_Management_System
             {
                 MessageBox.Show("You are not a registered driver, please contact an admin to register.");
             }
+            
         }
 
         //Function to change the Driver Status
@@ -123,17 +126,27 @@ namespace Taxi_Management_System
             TempAdmin.SendTripData(TempTripp);
         }
 
-        public void ViewdriverHistory(string uname)
+        public void ViewdriverHistory(string uname,DataGridView D)
         {
             int num_trips;
             num_trips = DriverGlobals.DriverMap[uname].DriverTrip_.Count;
+            DataTable DriverTrips = new DataTable();
+            DriverTrips.Columns.Add("Client Name");
+            DriverTrips.Columns.Add("From");
+            DriverTrips.Columns.Add("To");
+            DriverTrips.Columns.Add("Date");
+
+            DataRow NewTrip;
             for (int i = 0; i < num_trips; i++)
             {
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].ClientName);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].From);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].To);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].Date);
+                NewTrip = DriverTrips.NewRow();
+                NewTrip["Client Name"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].ClientName;
+                NewTrip["From"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].From;
+                NewTrip["To"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].To;
+                NewTrip["Date"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].Date;
+                DriverTrips.Rows.Add(NewTrip);
             }
+            D.DataSource = DriverTrips;
     }
 }
 }
