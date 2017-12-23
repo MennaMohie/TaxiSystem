@@ -19,13 +19,7 @@ namespace Taxi_Management_System
 
     }
 
-    public class DriverTrip
-    {
-        public string ClientName;
-        public DateTime Date;
-        public string From;
-        public string To;
-    }
+    
 
     public class Driver
     {
@@ -36,7 +30,7 @@ namespace Taxi_Management_System
         public string CarID;
         public string Salary;
         public string Status;
-        List<DriverTrip> DriverTrip_ = new List<DriverTrip>();
+        List<Trip> DriverTrip_ = new List<Trip>();
 
         //Functions
         //Filling the map of drivers
@@ -108,7 +102,7 @@ namespace Taxi_Management_System
         //Recieving a request
         public void RecieveRequest(Driver FreeDriver_, Client Customer)
         {
-            DriverTrip TempTrip = new DriverTrip();
+            Trip TempTrip = new Trip();
             FreeDriver_.ChangeStatus(FreeDriver_.DriverUsername);
             TempTrip.ClientName = Customer.ClientName;
             TempTrip.From = "hakhodha mn textbox";
@@ -117,12 +111,12 @@ namespace Taxi_Management_System
             DriverTrip_.Add(TempTrip);
 
             //////////////////////////Send trip data to the admin List
-            Admin.Trip TempTripp = new Admin.Trip();
+            Trip TempTripp = new Trip();
             TempTripp.DriverName = FreeDriver_.DriverName;
             TempTripp.ClientName = TempTrip.ClientName;
             TempTripp.From = TempTrip.From;
             TempTripp.To = TempTrip.To;
-            TempTripp.thisday = TempTrip.Date;
+            TempTripp.Date = TempTrip.Date;
 
             Admin TempAdmin = new Admin();
             TempAdmin.SendTripData(TempTripp);

@@ -23,7 +23,7 @@ namespace Taxi_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Register());
+            Application.Run(new AddCar());
 
     }
     }

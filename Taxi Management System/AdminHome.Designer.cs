@@ -46,6 +46,7 @@
             this.buttonAddNewDriver.TabIndex = 0;
             this.buttonAddNewDriver.Text = "Add New Driver";
             this.buttonAddNewDriver.UseVisualStyleBackColor = false;
+            this.buttonAddNewDriver.Click += new System.EventHandler(this.buttonAddNewDriver_Click);
             // 
             // buttonAddNewCar
             // 
@@ -59,6 +60,7 @@
             this.buttonAddNewCar.TabIndex = 1;
             this.buttonAddNewCar.Text = "Add New Car";
             this.buttonAddNewCar.UseVisualStyleBackColor = false;
+            this.buttonAddNewCar.Click += new System.EventHandler(this.buttonAddNewCar_Click);
             // 
             // buttonViewReports
             // 
@@ -72,6 +74,7 @@
             this.buttonViewReports.TabIndex = 2;
             this.buttonViewReports.Text = "View Reports";
             this.buttonViewReports.UseVisualStyleBackColor = false;
+            this.buttonViewReports.Click += new System.EventHandler(this.buttonViewReports_Click);
             // 
             // AdminHome
             // 

@@ -16,5 +16,25 @@ namespace Taxi_Management_System
         {
             InitializeComponent();
         }
+
+        private void buttonAddNewDriver_Click(object sender, EventArgs e)
+        {
+            AddDriver adddriver = new AddDriver();
+            adddriver.Show();
+            this.Hide();
+        }
+
+        private void buttonAddNewCar_Click(object sender, EventArgs e)
+        {
+            AddCar addcar = new AddCar();
+            addcar.Show();
+            this.Hide();
+        }
+
+        private void buttonViewReports_Click(object sender, EventArgs e)
+        {
+           
+            this.Hide();
+        }
     }
 }

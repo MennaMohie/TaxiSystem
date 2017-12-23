@@ -14,7 +14,8 @@ namespace Taxi_Management_System
     {
         public DriverTrips()
         {
-           
+            InitializeComponent();
+            
         }
     }
 }

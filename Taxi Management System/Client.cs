@@ -17,13 +17,7 @@ namespace Taxi_Management_System
 
     }
 
-    public class ClientTrip
-    {
-        public string DriverName;
-        public DateTime Date;
-        public string From;
-        public string To;
-    }
+   
 
     public class Client
     {
@@ -32,7 +26,7 @@ namespace Taxi_Management_System
         public string ClientName;
         public string ClientID;
         public string ClientPassword;
-        List<ClientTrip> ClientTrip_ = new List<ClientTrip>();
+        List<Trip> ClientTrip_ = new List<Trip>();
 
         //Functions
         //Filling the map of clients
@@ -105,26 +99,22 @@ namespace Taxi_Management_System
             {
                 if (ClientGlobals.ClientMap[uname].ClientPassword == password )
                 {
-                    Program.client.ClientUsername = uname;
-                    clientHome ClientHome = new clientHome();
-                    ClientHome.Show();               
+                    Login.isClient = true;
+                    Login.notregisterd = false;
+                    Program.client.ClientUsername = uname;   
                 }
                 else
                 {
+                    Login.notregisterd = false;
                     MessageBox.Show("Username or password incorrect, please try again.");
                 }
             }
-            else
-            {
-                MessageBox.Show("User doesn't exist, please register.");
-                Register r = new Register();
-                r.Show();
-            }
+           
         }
 
         public void ReserveTaxi(string clientUsername, string From_ , string To_ )
         {
-            ClientTrip TempTrip = new ClientTrip();
+            Trip TempTrip = new Trip();
 
             string driverUsername;
             while(DriverGlobals.FreeDrivers.Count!=0)
