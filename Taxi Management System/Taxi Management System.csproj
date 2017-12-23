@@ -73,6 +73,12 @@
     <Compile Include="clientHome.Designer.cs">
       <DependentUpon>clientHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTrips.Designer.cs">
+      <DependentUpon>ClientTrips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driver-Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
       <DependentUpon>Driver-Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver.cs" />
+    <Compile Include="DriverTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverTrips.Designer.cs">
+      <DependentUpon>DriverTrips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +136,14 @@
     <EmbeddedResource Include="clientHome.resx">
       <DependentUpon>clientHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientTrips.resx">
+      <DependentUpon>ClientTrips.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driver-Home.resx">
       <DependentUpon>Driver-Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverTrips.resx">
+      <DependentUpon>DriverTrips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login-Register.resx">
       <DependentUpon>Login-Register.cs</DependentUpon>

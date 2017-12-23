@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.Windows.Forms;
+using System.Data;
 
 
 namespace Taxi_Management_System
@@ -30,7 +31,7 @@ namespace Taxi_Management_System
         public string DriverPassword;
         public string DriverName;
         public string DriverID;
-        public string Carplatenumber;
+        public string CarID;
         public string Salary;
         public string Status;
         List<DriverTrip> DriverTrip_ = new List<DriverTrip>();
@@ -41,11 +42,13 @@ namespace Taxi_Management_System
         {
             StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
+            //StreamReader Stream = new StreamReader("Drivers.txt");
+
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Driver tempDriver = new Driver();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -57,7 +60,9 @@ namespace Taxi_Management_System
                 tempDriver.Status = Words[6];
 
                 DriverGlobals.DriverMap[tempDriver.DriverUsername] = tempDriver;
-                
+
+                Line = Stream.ReadLine();
+
             }
             return true;
         }
@@ -69,6 +74,7 @@ namespace Taxi_Management_System
             {
                 if(DriverGlobals.DriverMap[uname].DriverPassword == password)
                 {
+                    Login.currentUsername = uname;
                     Application.Run(new Driver_Home());
                 }
                 else
@@ -80,6 +86,7 @@ namespace Taxi_Management_System
             {
                 MessageBox.Show("You are not a registered driver, please contact an admin to register.");
             }
+            
         }
 
         //Function to change the Driver Status
@@ -119,17 +126,27 @@ namespace Taxi_Management_System
             TempAdmin.SendTripData(TempTripp);
         }
 
-        public void ViewdriverHistory(string uname)
+        public void ViewdriverHistory(string uname,DataGridView D)
         {
             int num_trips;
             num_trips = DriverGlobals.DriverMap[uname].DriverTrip_.Count;
+            DataTable DriverTrips = new DataTable();
+            DriverTrips.Columns.Add("Client Name");
+            DriverTrips.Columns.Add("From");
+            DriverTrips.Columns.Add("To");
+            DriverTrips.Columns.Add("Date");
+
+            DataRow NewTrip;
             for (int i = 0; i < num_trips; i++)
             {
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].ClientName);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].From);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].To);
-                Console.WriteLine(DriverGlobals.DriverMap[uname].DriverTrip_[i].Date);
+                NewTrip = DriverTrips.NewRow();
+                NewTrip["Client Name"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].ClientName;
+                NewTrip["From"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].From;
+                NewTrip["To"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].To;
+                NewTrip["Date"] = DriverGlobals.DriverMap[uname].DriverTrip_[i].Date;
+                DriverTrips.Rows.Add(NewTrip);
             }
+            D.DataSource = DriverTrips;
     }
 }
 }

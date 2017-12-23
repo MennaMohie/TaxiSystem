@@ -12,7 +12,9 @@ namespace Taxi_Management_System
 {
     public partial class Login : Form
     {
-        public static string currentClientUsername;
+        public static string currentUsername;
+       
+        
         public Login()
         {
             InitializeComponent();
@@ -32,8 +34,7 @@ namespace Taxi_Management_System
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            Client c = new Taxi_Management_System.Client();
-            c.ClientLogin(usernametext.Text, loginpasswordtext.Text);
+           
         }
     }
 }

@@ -31,13 +31,15 @@ namespace Taxi_Management_System
 
         public bool FillAdminMap()
         {
-            StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+
+            //StreamReader Stream = new StreamReader("Admin.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Admin TempAdmin = new Admin();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -45,6 +47,8 @@ namespace Taxi_Management_System
                 TempAdmin.AdminPassword = Words[0];
 
                 AdminGlobals.AdminMap[TempAdmin.AdminName] = TempAdmin;
+
+                Line = Stream.ReadLine();
 
             }
             return true;
@@ -86,18 +90,12 @@ namespace Taxi_Management_System
                     writer.WriteLine(Model);
                     MessageBox.Show("car has been added successfully");
                 }
-
-
-
             }
             else
             {
                 MessageBox.Show("Please fill the empty text boxes");
 
             }
-
-
-
         }
 
 

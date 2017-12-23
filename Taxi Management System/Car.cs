@@ -23,13 +23,15 @@ namespace Taxi_Management_System
         public bool FillCarMap()
         {
 
-            StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Cars.txt");
+
+            //StreamReader Stream = new StreamReader("Cars.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Car tempCar = new Car();
 
-            while (Line != null)
+            while (!string.IsNullOrWhiteSpace(Line))
             {
                 string[] Words = Line.Split(Delimeters);
 
@@ -39,7 +41,8 @@ namespace Taxi_Management_System
                 tempCar.Model = Words[3];
 
                 CarGlobals.CarMap[tempCar.PlateNumber] = tempCar;
-                
+                Line = Stream.ReadLine();
+
             }
             return true;
         }

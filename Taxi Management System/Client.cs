@@ -38,6 +38,8 @@ namespace Taxi_Management_System
         {
             StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
 
+            //StreamReader Stream = new StreamReader("Clients.txt");
+
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
             Client tempClient = new Client();
@@ -54,10 +56,6 @@ namespace Taxi_Management_System
                 ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;
 
                 Line = Stream.ReadLine();
-
-                MessageBox.Show("READING CLIENT: " + tempClient.ClientUsername);
-                if (string.IsNullOrWhiteSpace(Line))
-                    MessageBox.Show("NULL");
             }
             
 
