@@ -19,5 +19,19 @@ namespace Taxi_Management_System
             
 
         }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+            this.Hide();
+        }
     }
 }

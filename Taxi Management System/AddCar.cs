@@ -25,7 +25,7 @@ namespace Taxi_Management_System
         private void AddCarButton_Click(object sender, EventArgs e)
         {
             Admin admin = new Admin();
-            admin.AddNewCar(PlateNumber.Text, Color.Text, Year.Text, Model.Text);
+            admin.AddNewCar(textBoxcarnumber.Text, textBoxcarcolor.Text, textBoxcaryear.Text, textBoxcarmodel.Text);
         }
     }
 }

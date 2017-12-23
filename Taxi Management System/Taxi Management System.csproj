@@ -115,6 +115,9 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="clientHome.resx">
+      <DependentUpon>clientHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driver-Home.resx">
       <DependentUpon>Driver-Home.cs</DependentUpon>
     </EmbeddedResource>

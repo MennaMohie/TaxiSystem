@@ -34,41 +34,50 @@
             // 
             // LogInButton
             // 
-            this.LogInButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogInButton.BackColor = System.Drawing.Color.Black;
+            this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LogInButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogInButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LogInButton.Location = new System.Drawing.Point(407, 169);
+            this.LogInButton.ForeColor = System.Drawing.Color.White;
+            this.LogInButton.Location = new System.Drawing.Point(432, 179);
+            this.LogInButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(118, 56);
+            this.LogInButton.Size = new System.Drawing.Size(194, 75);
             this.LogInButton.TabIndex = 0;
             this.LogInButton.Text = "Log In";
             this.LogInButton.UseVisualStyleBackColor = false;
+            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SignUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SignUpButton.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SignUpButton.Location = new System.Drawing.Point(407, 260);
+            this.SignUpButton.Location = new System.Drawing.Point(432, 315);
+            this.SignUpButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SignUpButton.Name = "SignUpButton";
-            this.SignUpButton.Size = new System.Drawing.Size(118, 56);
+            this.SignUpButton.Size = new System.Drawing.Size(194, 75);
             this.SignUpButton.TabIndex = 1;
             this.SignUpButton.Text = "Sign Up";
             this.SignUpButton.UseVisualStyleBackColor = false;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // Login_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.Login_Register_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.LogInButton);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "Login_Register";
-            this.Text = "Login_Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login/Register";
             this.ResumeLayout(false);
 
         }

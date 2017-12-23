@@ -41,9 +41,9 @@
             this.buttonDriverViewTrips.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonDriverViewTrips.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverViewTrips.ForeColor = System.Drawing.Color.White;
-            this.buttonDriverViewTrips.Location = new System.Drawing.Point(43, 69);
+            this.buttonDriverViewTrips.Location = new System.Drawing.Point(23, 23);
             this.buttonDriverViewTrips.Name = "buttonDriverViewTrips";
-            this.buttonDriverViewTrips.Size = new System.Drawing.Size(258, 100);
+            this.buttonDriverViewTrips.Size = new System.Drawing.Size(255, 90);
             this.buttonDriverViewTrips.TabIndex = 0;
             this.buttonDriverViewTrips.Text = "View Trips";
             this.buttonDriverViewTrips.UseVisualStyleBackColor = false;
@@ -56,9 +56,9 @@
             this.buttonDriverChangeStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonDriverChangeStatus.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverChangeStatus.ForeColor = System.Drawing.Color.White;
-            this.buttonDriverChangeStatus.Location = new System.Drawing.Point(43, 194);
+            this.buttonDriverChangeStatus.Location = new System.Drawing.Point(23, 136);
             this.buttonDriverChangeStatus.Name = "buttonDriverChangeStatus";
-            this.buttonDriverChangeStatus.Size = new System.Drawing.Size(255, 100);
+            this.buttonDriverChangeStatus.Size = new System.Drawing.Size(255, 90);
             this.buttonDriverChangeStatus.TabIndex = 2;
             this.buttonDriverChangeStatus.Text = "Change Status";
             this.buttonDriverChangeStatus.UseVisualStyleBackColor = false;
@@ -70,9 +70,9 @@
             this.buttonDriverRequests.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonDriverRequests.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriverRequests.ForeColor = System.Drawing.Color.White;
-            this.buttonDriverRequests.Location = new System.Drawing.Point(43, 318);
+            this.buttonDriverRequests.Location = new System.Drawing.Point(23, 250);
             this.buttonDriverRequests.Name = "buttonDriverRequests";
-            this.buttonDriverRequests.Size = new System.Drawing.Size(255, 100);
+            this.buttonDriverRequests.Size = new System.Drawing.Size(255, 90);
             this.buttonDriverRequests.TabIndex = 3;
             this.buttonDriverRequests.Text = "Available Requests";
             this.buttonDriverRequests.UseVisualStyleBackColor = false;
@@ -83,7 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(813, 642);
+            this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.buttonDriverRequests);
             this.Controls.Add(this.buttonDriverChangeStatus);
             this.Controls.Add(this.buttonDriverViewTrips);
