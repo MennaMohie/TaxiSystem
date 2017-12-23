@@ -32,7 +32,11 @@ namespace Taxi_Management_System
 
         public bool FillAdminMap()
         {
+            //Awad
             StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+
+            //mohie
+            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //StreamReader Stream = new StreamReader("Admin.txt");
 
@@ -45,7 +49,7 @@ namespace Taxi_Management_System
                 string[] Words = Line.Split(Delimeters);
 
                 TempAdmin.AdminName = Words[0];
-                TempAdmin.AdminPassword = Words[0];
+                TempAdmin.AdminPassword = Words[1];
 
                 AdminGlobals.AdminMap[TempAdmin.AdminName] = TempAdmin;
 
@@ -61,17 +65,18 @@ namespace Taxi_Management_System
             {
                 if (AdminGlobals.AdminMap[uname].AdminPassword == password)
                 {
-                    Application.Run(new AdminHome());
+                    Login.isAdmin = true;
+                    Login.notregisterd = false;
+
                 }
                 else
                 {
+                    Login.notregisterd = false;
                     MessageBox.Show("Either username or password is incorrent, please try again.");
                 }
             }
-            else
-            {
-                MessageBox.Show("You are not a registered driver, please contact an admin to register.");
-            }
+            
+            
         }
 
         public void SendTripData(Admin.Trip Trip)

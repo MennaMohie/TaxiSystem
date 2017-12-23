@@ -101,21 +101,17 @@ namespace Taxi_Management_System
             {
                 if (ClientGlobals.ClientMap[uname].ClientPassword == password )
                 {
-                    Program.client.ClientUsername = uname;
-                    clientHome ClientHome = new clientHome();
-                    ClientHome.Show();               
+                    Login.isClient = true;
+                    Login.notregisterd = false;
+                    Program.client.ClientUsername = uname;   
                 }
                 else
                 {
+                    Login.notregisterd = false;
                     MessageBox.Show("Username or password incorrect, please try again.");
                 }
             }
-            else
-            {
-                MessageBox.Show("User doesn't exist, please register.");
-                Register r = new Register();
-                r.Show();
-            }
+           
         }
 
         public void ReserveTaxi(string clientUsername, string From_ , string To_ )

@@ -21,7 +21,7 @@ namespace Taxi_Management_System
         private void buttonrequest_Click(object sender, EventArgs e)
         {
             Program.client.ReserveTaxi(Program.client.ClientUsername, textBoxfrom.Text, textBoxto.Text);
-            clientHome.requested = true;
+            Login.requested = true;
             clientHome client_home = new clientHome();
             client_home.Show();
             this.Close();

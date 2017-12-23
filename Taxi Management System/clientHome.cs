@@ -13,7 +13,7 @@ namespace Taxi_Management_System
 
     public partial class clientHome : Form
     {
-        public static bool requested;
+        
         public clientHome()
         {
             InitializeComponent();
@@ -27,13 +27,18 @@ namespace Taxi_Management_System
 
         private void buttonClientRequest_Click(object sender, EventArgs e)
         {
-            if (clientHome.requested==true)
+            if (Login.requested == true)
             {
+                MessageBox.Show("Sorry you already requested a Taxi");
                 buttonClientRequest.Visible = false;
+
             }
-            request_taxiForm request = new request_taxiForm();
-            request.Show();
-            this.Hide();
+            else
+            {
+                request_taxiForm request = new request_taxiForm();
+                request.Show();
+                this.Hide();
+            }
         }
     }
 }
