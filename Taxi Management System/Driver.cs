@@ -30,7 +30,7 @@ namespace Taxi_Management_System
         public string DriverPassword;
         public string DriverName;
         public string DriverID;
-        public string CarID;
+        public string Carplatenumber;
         public string Salary;
         public string Status;
         List<DriverTrip> DriverTrip_ = new List<DriverTrip>();
@@ -39,7 +39,7 @@ namespace Taxi_Management_System
         //Filling the map of drivers
         public bool FillDriverMap()
         {
-            StreamReader Stream = new StreamReader("Drivers.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();

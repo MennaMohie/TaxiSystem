@@ -114,12 +114,13 @@
             this.AddDriverbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddDriverbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDriverbutton.ForeColor = System.Drawing.Color.White;
-            this.AddDriverbutton.Location = new System.Drawing.Point(401, 387);
+            this.AddDriverbutton.Location = new System.Drawing.Point(426, 398);
             this.AddDriverbutton.Name = "AddDriverbutton";
-            this.AddDriverbutton.Size = new System.Drawing.Size(212, 75);
+            this.AddDriverbutton.Size = new System.Drawing.Size(176, 53);
             this.AddDriverbutton.TabIndex = 8;
             this.AddDriverbutton.Text = "Add Car";
             this.AddDriverbutton.UseVisualStyleBackColor = false;
+            this.AddDriverbutton.Click += new System.EventHandler(this.AddDriverbutton_Click);
             // 
             // AddCar
             // 

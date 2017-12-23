@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Taxi_Management_System
 {
+
     public partial class clientHome : Form
     {
+        public static bool requested;
         public clientHome()
         {
             InitializeComponent();
@@ -19,12 +21,19 @@ namespace Taxi_Management_System
 
         private void Viewtripsbuttonclient_Click(object sender, EventArgs e)
         {
-
+            Program.client.ViewClientHistory(Program.client.ClientUsername);
+            this.Hide();
         }
 
         private void buttonClientRequest_Click(object sender, EventArgs e)
         {
-            
+            if (clientHome.requested==true)
+            {
+                buttonClientRequest.Visible = false;
+            }
+            request_taxiForm request = new request_taxiForm();
+            request.Show();
+            this.Hide();
         }
     }
 }

@@ -112,14 +112,14 @@ namespace Taxi_Management_System
                 Console.WriteLine(AllTrips[i].thisday);
             }
         }
-        public void addnewdriver (string uname,string password , string name , string driverid , string carid , string salary , string status)
+        public void addnewdriver (string uname,string password , string name , string driverid , string carplatenumber , string salary , string status)
         {
             Driver tempdriver=new Driver();
             tempdriver.DriverUsername = uname;
             tempdriver.DriverPassword = password;
             tempdriver.DriverName = name;
             tempdriver.DriverID = driverid;
-            tempdriver.CarID = carid;
+            tempdriver.Carplatenumber = carplatenumber;
             tempdriver.Salary = salary;
             tempdriver.Status = status;
             DriverGlobals.DriverMap[uname] = tempdriver;
