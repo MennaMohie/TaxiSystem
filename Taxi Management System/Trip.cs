@@ -10,8 +10,9 @@ namespace Taxi_Management_System
     {
         public string DriverName;
         public string ClientName;
-        public string From;
         public string To;
+        public string From;
         public DateTime Date;
+
     }
 }

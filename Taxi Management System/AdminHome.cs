@@ -33,7 +33,6 @@ namespace Taxi_Management_System
 
         private void buttonViewReports_Click(object sender, EventArgs e)
         {
-            Program.admin.viewtrips();
             this.Hide();
         }
     }

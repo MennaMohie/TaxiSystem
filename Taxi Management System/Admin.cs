@@ -67,7 +67,7 @@ namespace Taxi_Management_System
             }
         }
 
-        public void SendTripData(Admin.Trip Trip)
+        public void SendTripData(Trip Trip)
         {
             AllTrips.Add(Trip);
         }
@@ -112,7 +112,7 @@ namespace Taxi_Management_System
                 NewTrip["Driver Name"] = AllTrips[i].DriverName;
                 NewTrip["From"] = AllTrips[i].From;
                 NewTrip["To"] = AllTrips[i].To;
-                NewTrip["Date"] = AllTrips[i].thisday;
+                NewTrip["Date"] = AllTrips[i].Date;
                 Trips.Rows.Add(NewTrip);
             }
             DGV.DataSource = Trips;
