@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Taxi_Management_System
 {
@@ -99,16 +100,31 @@ namespace Taxi_Management_System
         }
 
 
-        public void viewtrips ()
+        public void viewtrips (DataGridView DGV)
         {
-            for (int i=0; i<AllTrips.Count; i++)
+            int num_trips;
+            num_trips = AllTrips.Count;
+            DataTable Trips = new DataTable();
+            Trips.Columns.Add("Client Name");
+            Trips.Columns.Add("Driver Name");
+            Trips.Columns.Add("From");
+            Trips.Columns.Add("To");
+            Trips.Columns.Add("Date");
+
+            DataRow NewTrip;
+            for (int i = 0; i < num_trips; i++)
             {
-                Console.WriteLine(AllTrips[i].ClientName);
-                Console.WriteLine(AllTrips[i].DriverName);
-                Console.WriteLine(AllTrips[i].From);
-                Console.WriteLine(AllTrips[i].To);
-                Console.WriteLine(AllTrips[i].thisday);
+                NewTrip = Trips.NewRow();
+                NewTrip["Client Name"] = AllTrips[i].ClientName;
+                NewTrip["Driver Name"] = AllTrips[i].DriverName;
+                NewTrip["From"] = AllTrips[i].From;
+                NewTrip["To"] = AllTrips[i].To;
+                NewTrip["Date"] = AllTrips[i].thisday;
+                Trips.Rows.Add(NewTrip);
             }
+            DGV.DataSource = Trips;
+
+            
         }
         public void addnewdriver (string uname,string password , string name , string driverid , string carid , string salary , string status)
         {
