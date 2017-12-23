@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Data;
 
 namespace Taxi_Management_System
 {
@@ -12,13 +13,14 @@ namespace Taxi_Management_System
         public static class CarGlobals
         {
             public static Dictionary<string, Car> CarMap = new Dictionary<string, Car>();
+            public static Dictionary<string, Car> NewCars = new Dictionary<string, Car>();
         }
+
+        public string PlateNumber;
+        public string Color;
+        public string Year;
+        public string Model;
         
-        string PlateNumber;
-        string Color;
-        string Year;
-        string Model;
-        string CarDriverID;
         
         public bool FillCarMap()
         {

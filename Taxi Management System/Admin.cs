@@ -98,7 +98,7 @@ namespace Taxi_Management_System
         }
 
 
-        public void viewtrips (DataGridView DGV)
+        public void viewtrips ()
         {
             int num_trips;
             num_trips = AllTrips.Count;
@@ -124,7 +124,7 @@ namespace Taxi_Management_System
 
             
         }
-        public void addnewdriver (string uname,string password , string name , string driverid , string carplatenumber , string salary , string status)
+        public void addnewdriver (string uname,string password , string name , string driverid , string carid , string salary , string status)
         {
             Driver tempdriver=new Driver();
             tempdriver.DriverUsername = uname;
@@ -135,7 +135,63 @@ namespace Taxi_Management_System
             tempdriver.Salary = salary;
             tempdriver.Status = status;
             DriverGlobals.DriverMap[uname] = tempdriver;
+            DriverGlobals.NewDrivers[uname] = tempdriver;
+        }
 
+        public void AddNewCar(string PlateNumber, string Color, string Year, string Model)
+        {
+            Car TempCar = new Car();
+            TempCar.PlateNumber = PlateNumber;
+            TempCar.Color = Color;
+            TempCar.Year = Year;
+            TempCar.Model = Model;
+            Car.CarGlobals.CarMap[PlateNumber] = TempCar;
+            Car.CarGlobals.NewCars[PlateNumber] = TempCar;
+        }
+
+        //Di l function ely bt ADD fel text file -Drivers-
+        public void UpdateDriverFile(string DriverUsername, string DriverPassword, string DriverName, string CarID, string Salary, string Status)
+        {
+            if (!string.IsNullOrEmpty(DriverUsername) && !string.IsNullOrEmpty(DriverPassword)
+                && !string.IsNullOrEmpty(DriverName) && !string.IsNullOrEmpty(CarID) && !string.IsNullOrEmpty(Salary) && !string.IsNullOrEmpty(Status))
+            {
+                using (StreamWriter writer = new StreamWriter("Drivers.txt", true))
+                {
+                    writer.WriteLine(DriverUsername + " ");
+                    writer.Write(DriverPassword + " ");
+                    writer.Write(DriverName + " ");
+                    writer.Write(CarID + " ");
+                    writer.Write(Salary + " ");
+                    writer.Write(Status + " ");
+                    MessageBox.Show("Driver has been added successfully!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes!");
+
+            }
+        }
+
+        //De l function ely bt ADD fel file -Cars-
+        public void UpdateCarFile(string PlateNumber, string Color, string Year, string Model)
+        {
+            if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
+                && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
+            {
+                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
+                {
+                    writer.Write(PlateNumber + " ");
+                    writer.Write(Color + " ");
+                    writer.Write(Year + " ");
+                    writer.WriteLine(Model);
+                    MessageBox.Show("car has been added successfully");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill the empty text boxes");
+            }
         }
     }
 }

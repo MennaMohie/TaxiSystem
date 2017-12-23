@@ -15,6 +15,8 @@ namespace Taxi_Management_System
     {
         public static Queue<Driver> FreeDrivers = new Queue<Driver>();
         public static Dictionary<string, Driver> DriverMap = new Dictionary<string, Driver>();
+        public static Dictionary<string, Driver> NewDrivers = new Dictionary<string, Driver>();
+
     }
 
     
