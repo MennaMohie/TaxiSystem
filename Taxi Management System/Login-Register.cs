@@ -16,8 +16,8 @@ namespace Taxi_Management_System
         {
             InitializeComponent();
 
-            
-
+            Client c = new Client();
+            c.FillCientMap();
         }
 
         private void LogInButton_Click(object sender, EventArgs e)

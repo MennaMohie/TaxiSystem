@@ -70,6 +70,7 @@
             this.loginpasswordtext.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginpasswordtext.Location = new System.Drawing.Point(290, 263);
             this.loginpasswordtext.Name = "loginpasswordtext";
+            this.loginpasswordtext.PasswordChar = '*';
             this.loginpasswordtext.Size = new System.Drawing.Size(245, 32);
             this.loginpasswordtext.TabIndex = 3;
             // 
