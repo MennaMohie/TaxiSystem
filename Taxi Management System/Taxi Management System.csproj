@@ -118,12 +118,7 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="request_taxiForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="request_taxiForm.Designer.cs">
-      <DependentUpon>request_taxiForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Trip.cs" />
     <EmbeddedResource Include="AddCar.resx">
       <DependentUpon>AddCar.cs</DependentUpon>
     </EmbeddedResource>
