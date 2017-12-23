@@ -31,7 +31,9 @@ namespace Taxi_Management_System
 
         public bool FillAdminMap()
         {
-            StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+
+            //StreamReader Stream = new StreamReader("Admin.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
