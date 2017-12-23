@@ -13,6 +13,8 @@ namespace Taxi_Management_System
     public static class ClientGlobals
     {
         public static Dictionary<string, Client> ClientMap = new Dictionary<string, Client>();
+        public static Dictionary<string, Client> NewClients = new Dictionary<string, Client>();
+
     }
 
     public class ClientTrip
@@ -36,9 +38,9 @@ namespace Taxi_Management_System
         //Filling the map of clients
         public bool FillCientMap()
         {
-            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
+           //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
 
-            //StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader("Clients.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
@@ -54,6 +56,7 @@ namespace Taxi_Management_System
                 tempClient.ClientPassword = Words[4];
 
                 ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;
+                
 
                 Line = Stream.ReadLine();
             }
@@ -78,6 +81,7 @@ namespace Taxi_Management_System
                     {
                         Reg.ClientID = ((ClientGlobals.ClientMap.Count) + 1).ToString();
                         ClientGlobals.ClientMap.Add(Reg.ClientUsername, Reg);
+                        ClientGlobals.NewClients.Add(Reg.ClientUsername, Reg);
                         MessageBox.Show("Registration Completed successfully");
                     }
                 }
