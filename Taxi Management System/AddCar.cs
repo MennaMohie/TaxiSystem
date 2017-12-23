@@ -27,5 +27,15 @@ namespace Taxi_Management_System
             Admin admin = new Admin();
             admin.AddNewCar(textBoxcarnumber.Text, textBoxcarcolor.Text, textBoxcaryear.Text, textBoxcarmodel.Text);
         }
+
+        private void AddDriverbutton_Click(object sender, EventArgs e)
+        {
+            Program.admin.AddNewCar(textBoxcarnumber.Text, textBoxcarcolor.Text, textBoxcaryear.Text, textBoxcarmodel.Text);
+            MessageBox.Show("The car is added successfully");
+            AdminHome admin_home = new AdminHome();
+            admin_home.Show();
+            this.Hide();
+
+        }
     }
 }
