@@ -30,7 +30,7 @@ namespace Taxi_Management_System
         public string ClientName;
         public string ClientID;
         public string ClientPassword;
-        List<ClientTrip> ClientTrip_ = new List<ClientTrip>();
+        List<Trip> ClientTrip_ = new List<Trip>();
 
         //Functions
         //Filling the map of clients

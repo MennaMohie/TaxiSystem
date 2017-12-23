@@ -17,13 +17,7 @@ namespace Taxi_Management_System
         public static Dictionary<string, Driver> DriverMap = new Dictionary<string, Driver>();
     }
 
-    public class DriverTrip
-    {
-        public string ClientName;
-        public DateTime Date;
-        public string From;
-        public string To;
-    }
+    
 
     public class Driver
     {
@@ -34,7 +28,7 @@ namespace Taxi_Management_System
         public string CarID;
         public string Salary;
         public string Status;
-        List<DriverTrip> DriverTrip_ = new List<DriverTrip>();
+        List<Trip> DriverTrip_ = new List<Trip>();
 
         //Functions
         //Filling the map of drivers
