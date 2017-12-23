@@ -16,5 +16,15 @@ namespace Taxi_Management_System
         {
             InitializeComponent();
         }
+
+        private void Viewtripsbuttonclient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonClientRequest_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

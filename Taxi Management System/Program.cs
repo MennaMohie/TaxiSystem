@@ -11,6 +11,12 @@ namespace Taxi_Management_System
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        public static Client client = new Client();
+        public static Driver driver = new Driver();
+        public static Car car = new Car();
+        public static Admin admin = new Admin();
+
         [STAThread]
         static void Main()
         {
@@ -18,6 +24,6 @@ namespace Taxi_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_Register());
 
-        }
+    }
     }
 }

@@ -103,7 +103,7 @@ namespace Taxi_Management_System
             {
                 if (ClientGlobals.ClientMap[uname].ClientPassword == password )
                 {
-                    Login.currentClientUsername = uname;
+                    Program.client.ClientUsername = uname;
                     clientHome ClientHome = new clientHome();
                     ClientHome.Show();               
                 }
