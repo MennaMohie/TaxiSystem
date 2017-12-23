@@ -15,6 +15,7 @@ namespace Taxi_Management_System
         public static string currentUsername;
         public static bool isAdmin = false;
         public static bool isClient = false;
+        public static bool isDriver = false;
         public static bool requested = false;
         public static bool notregisterd = true;
         public Login()
@@ -40,21 +41,27 @@ namespace Taxi_Management_System
                 
                 Program.client.ClientLogin(usernametextbox.Text, loginpasswordtext.Text);
                 Program.admin.AdminLogin(usernametextbox.Text, loginpasswordtext.Text);
-            
-             if (isAdmin==false && isClient==false && notregisterd==true)
+            Program.driver.DriverLogin(usernametextbox.Text, loginpasswordtext.Text);
+             if (isAdmin==false && isClient==false && notregisterd==true && isDriver==false)
             {
                 MessageBox.Show("Username isn't registered please register");
             }
-           else  if (isAdmin==true && isClient==false && notregisterd==false)
+           else  if (isAdmin==true && isClient==false && notregisterd==false && isDriver == false)
             {
                 AdminHome adminhome = new AdminHome();
                 adminhome.Show();
                 this.Hide();
             }
-            else if (isAdmin==false && isClient==true && notregisterd==false)
+            else if (isAdmin==false && isClient==true && notregisterd==false && isDriver == false)
             {
                 clientHome client_home = new clientHome();
                 client_home.Show();
+                this.Hide();
+            }
+             else if (isAdmin == false && isClient == false && notregisterd == false && isDriver == true)
+            {
+                Driver_Home driverhome = new Driver_Home();
+                driverhome.Show();
                 this.Hide();
             }
         }
