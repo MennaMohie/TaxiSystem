@@ -19,8 +19,6 @@ namespace Taxi_Management_System
 
     }
 
-    
-
     public class Driver
     {
         public string DriverUsername;
@@ -34,18 +32,18 @@ namespace Taxi_Management_System
 
         //Functions
         //Filling the map of drivers
-        public bool FillDriverMap()
+        public void FillDriverMap()
         {
             StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
             //StreamReader Stream = new StreamReader("Drivers.txt");
 
-            char[] Delimeters = { ' ', ',', '.', ':', '\t' };
+            char[] Delimeters = {' ', ',', '.', ':', '\t'};
             string Line = Stream.ReadLine();
-            Driver tempDriver = new Driver();
-
+            
             while (!string.IsNullOrWhiteSpace(Line))
             {
+                Driver tempDriver = new Driver();
                 string[] Words = Line.Split(Delimeters);
 
                 tempDriver.DriverUsername = Words[0];
@@ -55,36 +53,10 @@ namespace Taxi_Management_System
                 tempDriver.Salary = Words[5];
                 tempDriver.Status = Words[6];
 
-                DriverGlobals.DriverMap[tempDriver.DriverUsername] = tempDriver;
+                DriverGlobals.DriverMap.Add(tempDriver.DriverUsername, tempDriver);
 
                 Line = Stream.ReadLine();
-
             }
-            return true;
-        }
-
-        //Login Function for the driver
-        public void DriverLogin(string uname, string password)
-        {
-            if (DriverGlobals.DriverMap.ContainsKey(uname))
-            {
-                if(DriverGlobals.DriverMap[uname].DriverPassword == password)
-                {
-                    Login.currentUsername = uname;
-                      Login.isDriver = true;
-                    Login.notregisterd = false;
-                }
-                else
-                {
-                    Login.notregisterd = false;
-                    MessageBox.Show("Either username or password is incorrent, please try again.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("You are not a registered driver, please contact an admin to register.");
-            }
-            
         }
 
         //Function to change the Driver Status

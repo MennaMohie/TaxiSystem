@@ -31,7 +31,7 @@ namespace Taxi_Management_System
         private void AddDriverbutton_Click(object sender, EventArgs e)
         {
             Program.admin.AddNewCar(textBoxcarnumber.Text, textBoxcarcolor.Text, textBoxcaryear.Text, textBoxcarmodel.Text);
-            MessageBox.Show("The car is added successfully");
+            MessageBox.Show("The car has been added successfully.");
             AdminHome admin_home = new AdminHome();
             admin_home.Show();
             this.Hide();

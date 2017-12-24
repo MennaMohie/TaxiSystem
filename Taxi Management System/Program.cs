@@ -21,9 +21,19 @@ namespace Taxi_Management_System
         [STAThread]
         static void Main()
         {
+            ClientGlobals.ClientMap.Clear();
+            DriverGlobals.DriverMap.Clear();
+            CarGlobals.CarMap.Clear();
+            AdminGlobals.AdminMap.Clear();
+
+            client.FillCientMap();
+            driver.FillDriverMap();
+            car.FillCarMap();
+            admin.FillAdminMap();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddCar());
+            Application.Run(new Login_Register());
 
     }
     }

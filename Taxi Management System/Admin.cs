@@ -10,98 +10,54 @@ using System.Data;
 
 namespace Taxi_Management_System
 {
+    public static class AdminGlobals
+    {
+        public static Dictionary<string, Admin> AdminMap = new Dictionary<string, Admin>();
+        public static List<Trip> AllTrips = new List<Trip>();
+    }
+
     public class Admin
     {
-        public static class AdminGlobals
-        {
-            public static Dictionary<string, Admin> AdminMap = new Dictionary<string, Admin>();
-        }
-        public List<Trip> AllTrips = new List<Trip>();
+        public string AdminUsername;
+        public string AdminPassword;
 
-       
-
-        string AdminName;
-        string AdminPassword;
-
-        public bool FillAdminMap()
+        public void FillAdminMap()
         {
             //Awad
-            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //mohie
-            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //StreamReader Stream = new StreamReader("Admin.txt");
 
-            char[] Delimeters = { ' ', ',', '.', ':', '\t' };
+            char[] Delimeters = {' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
-            Admin TempAdmin = new Admin();
-
+            
             while (!string.IsNullOrWhiteSpace(Line))
             {
+                Admin TempAdmin = new Admin();
                 string[] Words = Line.Split(Delimeters);
 
-                TempAdmin.AdminName = Words[0];
+                TempAdmin.AdminUsername = Words[0];
                 TempAdmin.AdminPassword = Words[1];
 
-                AdminGlobals.AdminMap[TempAdmin.AdminName] = TempAdmin;
+                AdminGlobals.AdminMap[TempAdmin.AdminUsername] = TempAdmin;
 
                 Line = Stream.ReadLine();
 
             }
-            return true;
-        }
-
-        public void AdminLogin(string uname, string password)
-        {
-            if (AdminGlobals.AdminMap.ContainsKey(uname))
-            {
-                if (AdminGlobals.AdminMap[uname].AdminPassword == password)
-                {
-                    Login.isAdmin = true;
-                    Login.notregisterd = false;
-
-                }
-                else
-                {
-                    Login.notregisterd = false;
-                    MessageBox.Show("Either username or password is incorrent, please try again.");
-                }
-            }
-            
-            
         }
 
         public void SendTripData(Trip Trip)
         {
-            AllTrips.Add(Trip);
+            AdminGlobals.AllTrips.Add(Trip);
         }
-        public void AddNewCar(string PlateNumber, string Color, string Year, string Model)
-        {
-            if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
-                && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
-            {
-                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
-                {
-                    writer.Write(PlateNumber + " ");
-                    writer.Write(Color + " ");
-                    writer.Write(Year + " ");
-                    writer.WriteLine(Model);
-                    MessageBox.Show("car has been added successfully");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please fill the empty text boxes");
-
-            }
-        }
-
-
+        
         public void viewtrips ()
         {
             int num_trips;
-            num_trips = AllTrips.Count;
+            num_trips = AdminGlobals.AllTrips.Count;
             DataTable Trips = new DataTable();
             Trips.Columns.Add("Client Name");
             Trips.Columns.Add("Driver Name");
@@ -113,18 +69,18 @@ namespace Taxi_Management_System
             for (int i = 0; i < num_trips; i++)
             {
                 NewTrip = Trips.NewRow();
-                NewTrip["Client Name"] = AllTrips[i].ClientName;
-                NewTrip["Driver Name"] = AllTrips[i].DriverName;
-                NewTrip["From"] = AllTrips[i].From;
-                NewTrip["To"] = AllTrips[i].To;
-                NewTrip["Date"] = AllTrips[i].Date;
+                NewTrip["Client Name"] = AdminGlobals.AllTrips[i].ClientName;
+                NewTrip["Driver Name"] = AdminGlobals.AllTrips[i].DriverName;
+                NewTrip["From"] = AdminGlobals.AllTrips[i].From;
+                NewTrip["To"] = AdminGlobals.AllTrips[i].To;
+                NewTrip["Date"] = AdminGlobals.AllTrips[i].Date;
                 Trips.Rows.Add(NewTrip);
             }
-            DGV.DataSource = Trips;
+            //DGV.DataSource = Trips;
 
             
         }
-        public void addnewdriver (string uname,string password , string name , string driverid , string carid , string salary , string status)
+        public void AddNewDriver(string uname, string password, string name, string driverid, string carplatenumber, string salary, string status)
         {
             Driver tempdriver=new Driver();
             tempdriver.DriverUsername = uname;
@@ -145,17 +101,17 @@ namespace Taxi_Management_System
             TempCar.Color = Color;
             TempCar.Year = Year;
             TempCar.Model = Model;
-            Car.CarGlobals.CarMap[PlateNumber] = TempCar;
-            Car.CarGlobals.NewCars[PlateNumber] = TempCar;
+            CarGlobals.CarMap[PlateNumber] = TempCar;
+            CarGlobals.NewCars[PlateNumber] = TempCar;
         }
 
-        //Di l function ely bt ADD fel text file -Drivers-
-        public void UpdateDriverFile(string DriverUsername, string DriverPassword, string DriverName, string CarID, string Salary, string Status)
+        public void UpdateDriversFile(string DriverUsername, string DriverPassword, string DriverName, string CarID, string Salary, string Status)
         {
             if (!string.IsNullOrEmpty(DriverUsername) && !string.IsNullOrEmpty(DriverPassword)
                 && !string.IsNullOrEmpty(DriverName) && !string.IsNullOrEmpty(CarID) && !string.IsNullOrEmpty(Salary) && !string.IsNullOrEmpty(Status))
             {
-                using (StreamWriter writer = new StreamWriter("Drivers.txt", true))
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt", true))
+                //using (StreamWriter writer = new StreamWriter("Drivers.txt", true))
                 {
                     writer.WriteLine(DriverUsername + " ");
                     writer.Write(DriverPassword + " ");
@@ -173,24 +129,24 @@ namespace Taxi_Management_System
             }
         }
 
-        //De l function ely bt ADD fel file -Cars-
-        public void UpdateCarFile(string PlateNumber, string Color, string Year, string Model)
+        public void UpdateCarsFile(string PlateNumber, string Color, string Year, string Model)
         {
             if (!string.IsNullOrEmpty(PlateNumber) && !string.IsNullOrEmpty(Color)
                 && !string.IsNullOrEmpty(Year) && !string.IsNullOrEmpty(Model))
             {
-                using (StreamWriter writer = new StreamWriter("Cars.txt", true))
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Cars.txt", true))
+                //using (StreamWriter writer = new StreamWriter("Cars.txt", true))
                 {
-                    writer.Write(PlateNumber + " ");
+                    writer.WriteLine(PlateNumber + " ");
                     writer.Write(Color + " ");
                     writer.Write(Year + " ");
                     writer.WriteLine(Model);
-                    MessageBox.Show("car has been added successfully");
+                    MessageBox.Show("The car has been added successfully.");
                 }
             }
             else
             {
-                MessageBox.Show("Please fill the empty text boxes");
+                MessageBox.Show("Please fill the empty text boxes.");
             }
         }
     }

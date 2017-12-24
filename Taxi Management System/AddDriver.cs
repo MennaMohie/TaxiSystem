@@ -32,8 +32,8 @@ namespace Taxi_Management_System
             int lastdriverid = DriverGlobals.DriverMap.Count();
             int currentid = lastdriverid + 1;
             string driver_id = Convert.ToString(currentid);
-            Program.admin.addnewdriver(textBoxusername.Text, textBoxpassword.Text, textBoxname.Text, driver_id, textBoxcarnumber.Text, textBoxsalary.Text, textBoxstatus.Text);
-            MessageBox.Show("The Driver is added successfully");
+            Program.admin.AddNewDriver(textBoxusername.Text, textBoxpassword.Text, textBoxname.Text, driver_id, textBoxcarnumber.Text, textBoxsalary.Text, textBoxstatus.Text);
+            MessageBox.Show("The Driver has been added successfully");
             AdminHome admin_homr = new AdminHome();
             admin_homr.Show();
             this.Hide();

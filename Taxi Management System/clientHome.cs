@@ -27,18 +27,18 @@ namespace Taxi_Management_System
 
         private void buttonClientRequest_Click(object sender, EventArgs e)
         {
-            if (Login.requested == true)
-            {
-                MessageBox.Show("Sorry you already requested a Taxi");
-                buttonClientRequest.Visible = false;
+            //if (Login.requested == true)
+            //{
+            //    MessageBox.Show("Sorry you already requested a Taxi");
+            //    buttonClientRequest.Visible = false;
 
-            }
-            else
-            {
-                request_taxiForm request = new request_taxiForm();
-                request.Show();
-                this.Hide();
-            }
+            //}
+            //else
+            //{
+            //    request_taxiForm request = new request_taxiForm();
+            //    request.Show();
+            //    this.Hide();
+            //}
         }
     }
 }

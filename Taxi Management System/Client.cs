@@ -17,8 +17,6 @@ namespace Taxi_Management_System
 
     }
 
-   
-
     public class Client
     {
 
@@ -30,18 +28,17 @@ namespace Taxi_Management_System
 
         //Functions
         //Filling the map of clients
-        public bool FillCientMap()
+        public void FillCientMap()
         {
-           //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
-
-            StreamReader Stream = new StreamReader("Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
+            //StreamReader Stream = new StreamReader("Clients.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
-            Client tempClient = new Client();
-           
+        
             while(!string.IsNullOrWhiteSpace(Line))
             {
+                Client tempClient = new Client();
                 string[] Words = Line.Split(Delimeters);
 
                 tempClient.ClientUsername = Words[0];
@@ -51,12 +48,8 @@ namespace Taxi_Management_System
 
                 ClientGlobals.ClientMap[tempClient.ClientUsername] = tempClient;
                 
-
                 Line = Stream.ReadLine();
             }
-            
-
-            return true;
         }
 
         //Client Registeration
@@ -90,26 +83,6 @@ namespace Taxi_Management_System
             }
 
             
-        }
-
-        //Login Function for the client
-        public void ClientLogin(string uname, string password)
-        {
-            if (ClientGlobals.ClientMap.ContainsKey(uname))
-            {
-                if (ClientGlobals.ClientMap[uname].ClientPassword == password )
-                {
-                    Login.isClient = true;
-                    Login.notregisterd = false;
-                    Program.client.ClientUsername = uname;   
-                }
-                else
-                {
-                    Login.notregisterd = false;
-                    MessageBox.Show("Username or password incorrect, please try again.");
-                }
-            }
-           
         }
 
         public void ReserveTaxi(string clientUsername, string From_ , string To_ )

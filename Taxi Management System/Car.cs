@@ -8,14 +8,14 @@ using System.Data;
 
 namespace Taxi_Management_System
 {
+    public static class CarGlobals
+    {
+        public static Dictionary<string, Car> CarMap = new Dictionary<string, Car>();
+        public static Dictionary<string, Car> NewCars = new Dictionary<string, Car>();
+    }
+
     public class Car
     {
-        public static class CarGlobals
-        {
-            public static Dictionary<string, Car> CarMap = new Dictionary<string, Car>();
-            public static Dictionary<string, Car> NewCars = new Dictionary<string, Car>();
-        }
-
         public string PlateNumber;
         public string Color;
         public string Year;
