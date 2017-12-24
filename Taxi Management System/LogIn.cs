@@ -13,11 +13,7 @@ namespace Taxi_Management_System
     public partial class Login : Form
     {
         public static string currentUsername;
-        public static bool isAdmin = false;
-        public static bool isClient = false;
-        public static bool isDriver = false;
-        public static bool requested = false;
-        public static bool notregisterd = true;
+
         public Login()
         {
             InitializeComponent();
@@ -27,7 +23,7 @@ namespace Taxi_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -37,33 +33,66 @@ namespace Taxi_Management_System
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
+            //foreach(KeyValuePair<string,Driver> kvp in DriverGlobals.DriverMap)
+            //{
+            //    MessageBox.Show(kvp.Value.DriverPassword.ToString());
+            //}
 
+            bool isClient = false, isDriver = false, isAdmin = false, correctPassword = false;
+
+            if (ClientGlobals.ClientMap.ContainsKey(usernametextbox.Text))
+                isClient = true;
+            else if (DriverGlobals.DriverMap.ContainsKey(usernametextbox.Text))
+                isDriver = true;
+            else if (AdminGlobals.AdminMap.ContainsKey(usernametextbox.Text))
+                isAdmin = true;
+
+            if (!isClient && !isDriver && !isAdmin)
+                MessageBox.Show("Not found. Please retry or register.", "Invalid Data");
+
+            else if (isClient)
+            {
+                if (ClientGlobals.ClientMap[usernametextbox.Text].ClientPassword == loginpasswordtext.Text)
+                    correctPassword = true;
+            }
+            else if (isDriver)
+            {
+                if (DriverGlobals.DriverMap[usernametextbox.Text].DriverPassword == loginpasswordtext.Text)
+                    correctPassword = true;
+            }
+            else if (isAdmin)
+            {
+                if (AdminGlobals.AdminMap[usernametextbox.Text].AdminPassword == loginpasswordtext.Text)
+                    correctPassword = true;
+            }
+            
+
+            if (isClient && correctPassword)
+            {
+                clientHome ClientHome = new clientHome();
+                ClientHome.Show();
+                this.Hide();
+                currentUsername = usernametextbox.Text;
+            }
+                       
+            else if (isDriver && correctPassword)
+            {
+                Driver_Home DriverHome = new Driver_Home();
+                DriverHome.Show();
+                this.Hide();
+                currentUsername = usernametextbox.Text;
+            } 
                 
-                Program.client.ClientLogin(usernametextbox.Text, loginpasswordtext.Text);
-                Program.admin.AdminLogin(usernametextbox.Text, loginpasswordtext.Text);
-            Program.driver.DriverLogin(usernametextbox.Text, loginpasswordtext.Text);
-             if (isAdmin==false && isClient==false && notregisterd==true && isDriver==false)
+            else if (isAdmin && correctPassword)
             {
-                MessageBox.Show("Username isn't registered please register");
-            }
-           else  if (isAdmin==true && isClient==false && notregisterd==false && isDriver == false)
-            {
-                AdminHome adminhome = new AdminHome();
-                adminhome.Show();
+                AdminHome adminHome = new AdminHome();
+                adminHome.Show();
                 this.Hide();
+                currentUsername = usernametextbox.Text;
             }
-            else if (isAdmin==false && isClient==true && notregisterd==false && isDriver == false)
-            {
-                clientHome client_home = new clientHome();
-                client_home.Show();
-                this.Hide();
-            }
-             else if (isAdmin == false && isClient == false && notregisterd == false && isDriver == true)
-            {
-                Driver_Home driverhome = new Driver_Home();
-                driverhome.Show();
-                this.Hide();
-            }
+
+            else
+                MessageBox.Show("Please retry or register.", "Invalid Data");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
