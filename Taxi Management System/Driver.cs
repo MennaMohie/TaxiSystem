@@ -57,6 +57,8 @@ namespace Taxi_Management_System
 
                 Line = Stream.ReadLine();
             }
+
+            Stream.Close();
         }
 
         //Function to change the Driver Status

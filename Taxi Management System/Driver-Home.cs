@@ -32,5 +32,10 @@ namespace Taxi_Management_System
         {
 
         }
+
+        private void Driver_Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }

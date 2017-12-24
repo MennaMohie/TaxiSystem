@@ -38,5 +38,10 @@ namespace Taxi_Management_System
             admin_homr.Show();
             this.Hide();
         }
+
+        private void AddDriver_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }

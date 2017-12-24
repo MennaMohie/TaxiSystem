@@ -80,6 +80,7 @@
             this.Name = "Login_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login/Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_Register_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -36,18 +36,21 @@
             // 
             this.DriverTripsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DriverTripsTable.Location = new System.Drawing.Point(0, 0);
+            this.DriverTripsTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DriverTripsTable.Name = "DriverTripsTable";
-            this.DriverTripsTable.Size = new System.Drawing.Size(240, 150);
+            this.DriverTripsTable.Size = new System.Drawing.Size(280, 185);
             this.DriverTripsTable.TabIndex = 0;
             // 
             // DriverTrips
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 336);
+            this.ClientSize = new System.Drawing.Size(503, 414);
             this.Controls.Add(this.DriverTripsTable);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DriverTrips";
             this.Text = "DriverTrips";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DriverTrips_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DriverTripsTable)).EndInit();
             this.ResumeLayout(false);
 

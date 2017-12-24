@@ -30,5 +30,10 @@ namespace Taxi_Management_System
             registerForm.Show();
             this.Hide();
         }
+
+        private void Login_Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }

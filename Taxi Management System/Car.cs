@@ -22,7 +22,7 @@ namespace Taxi_Management_System
         public string Model;
         
         
-        public bool FillCarMap()
+        public void FillCarMap()
         {
 
             StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Cars.txt");
@@ -46,7 +46,8 @@ namespace Taxi_Management_System
                 Line = Stream.ReadLine();
 
             }
-            return true;
+
+            Stream.Close();
         }
     }
 }

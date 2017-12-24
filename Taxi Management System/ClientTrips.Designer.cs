@@ -63,6 +63,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "ClientTrips";
             this.Text = "ClientTrips";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientTrips_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

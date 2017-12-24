@@ -73,6 +73,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "clientHome";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.clientHome_FormClosing);
             this.ResumeLayout(false);
 
         }

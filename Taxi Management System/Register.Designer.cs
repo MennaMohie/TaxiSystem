@@ -96,6 +96,7 @@
             this.PasswordTextBox.Location = new System.Drawing.Point(179, 267);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(419, 32);
             this.PasswordTextBox.TabIndex = 5;
             // 
@@ -116,6 +117,7 @@
             this.ConfirmTextBox.Location = new System.Drawing.Point(288, 348);
             this.ConfirmTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConfirmTextBox.Name = "ConfirmTextBox";
+            this.ConfirmTextBox.PasswordChar = '*';
             this.ConfirmTextBox.Size = new System.Drawing.Size(310, 32);
             this.ConfirmTextBox.TabIndex = 7;
             // 
@@ -155,6 +157,7 @@
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

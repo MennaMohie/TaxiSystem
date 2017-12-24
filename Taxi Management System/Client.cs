@@ -50,6 +50,8 @@ namespace Taxi_Management_System
                 
                 Line = Stream.ReadLine();
             }
+
+            Stream.Close();
         }
 
         //Client Registeration

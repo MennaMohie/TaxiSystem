@@ -16,5 +16,10 @@ namespace Taxi_Management_System
         {
             InitializeComponent();
         }
+
+        private void ClientTrips_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }

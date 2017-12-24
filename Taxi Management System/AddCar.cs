@@ -37,5 +37,10 @@ namespace Taxi_Management_System
             this.Hide();
 
         }
+
+        private void AddCar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }

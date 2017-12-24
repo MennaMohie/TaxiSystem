@@ -63,7 +63,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(93, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "NAME:";
             // 
@@ -73,7 +73,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(93, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 19);
+            this.label2.Size = new System.Drawing.Size(131, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "USERNAME:";
             // 
@@ -83,7 +83,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(93, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 19);
+            this.label3.Size = new System.Drawing.Size(136, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "PASSWORD:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -94,7 +94,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(93, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 19);
+            this.label4.Size = new System.Drawing.Size(238, 24);
             this.label4.TabIndex = 4;
             this.label4.Text = "CAR\'s PLATE NUMBER:";
             // 
@@ -102,28 +102,28 @@
             // 
             this.textBoxname.Location = new System.Drawing.Point(175, 117);
             this.textBoxname.Name = "textBoxname";
-            this.textBoxname.Size = new System.Drawing.Size(337, 27);
+            this.textBoxname.Size = new System.Drawing.Size(337, 32);
             this.textBoxname.TabIndex = 5;
             // 
             // textBoxusername
             // 
             this.textBoxusername.Location = new System.Drawing.Point(230, 164);
             this.textBoxusername.Name = "textBoxusername";
-            this.textBoxusername.Size = new System.Drawing.Size(282, 27);
+            this.textBoxusername.Size = new System.Drawing.Size(282, 32);
             this.textBoxusername.TabIndex = 6;
             // 
             // textBoxcarnumber
             // 
             this.textBoxcarnumber.Location = new System.Drawing.Point(337, 261);
             this.textBoxcarnumber.Name = "textBoxcarnumber";
-            this.textBoxcarnumber.Size = new System.Drawing.Size(175, 27);
+            this.textBoxcarnumber.Size = new System.Drawing.Size(175, 32);
             this.textBoxcarnumber.TabIndex = 7;
             // 
             // textBoxpassword
             // 
             this.textBoxpassword.Location = new System.Drawing.Point(235, 212);
             this.textBoxpassword.Name = "textBoxpassword";
-            this.textBoxpassword.Size = new System.Drawing.Size(277, 27);
+            this.textBoxpassword.Size = new System.Drawing.Size(277, 32);
             this.textBoxpassword.TabIndex = 8;
             // 
             // label5
@@ -132,7 +132,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(93, 310);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 19);
+            this.label5.Size = new System.Drawing.Size(97, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "SALARY:";
             // 
@@ -142,7 +142,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(93, 358);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 19);
+            this.label6.Size = new System.Drawing.Size(96, 24);
             this.label6.TabIndex = 10;
             this.label6.Text = "STATUS:";
             // 
@@ -150,20 +150,20 @@
             // 
             this.textBoxsalary.Location = new System.Drawing.Point(196, 307);
             this.textBoxsalary.Name = "textBoxsalary";
-            this.textBoxsalary.Size = new System.Drawing.Size(316, 27);
+            this.textBoxsalary.Size = new System.Drawing.Size(316, 32);
             this.textBoxsalary.TabIndex = 11;
             // 
             // textBoxstatus
             // 
             this.textBoxstatus.Location = new System.Drawing.Point(196, 355);
             this.textBoxstatus.Name = "textBoxstatus";
-            this.textBoxstatus.Size = new System.Drawing.Size(316, 27);
+            this.textBoxstatus.Size = new System.Drawing.Size(316, 32);
             this.textBoxstatus.TabIndex = 12;
             this.textBoxstatus.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // AddDriver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -187,6 +187,7 @@
             this.Name = "AddDriver";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "s";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddDriver_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

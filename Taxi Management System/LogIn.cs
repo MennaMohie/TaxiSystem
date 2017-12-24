@@ -101,5 +101,10 @@ namespace Taxi_Management_System
             reg.Show();
             this.Hide();
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.updateFiles();
+        }
     }
 }
