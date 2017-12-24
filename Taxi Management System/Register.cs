@@ -29,11 +29,13 @@ namespace Taxi_Management_System
             Reg.ClientName = NameTextBox.Text;
             Reg.ClientPassword = PasswordTextBox.Text;
 
-            Reg.ClientRegister(Reg, ConfirmTextBox.Text);
-
-
-
-           
+            if(Reg.ClientRegister(Reg, ConfirmTextBox.Text))
+            {
+                clientHome ClientHome = new clientHome();
+                ClientHome.Show();
+                this.Hide();
+            }
+  
         }
     }
 }

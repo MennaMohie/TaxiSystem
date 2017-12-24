@@ -53,7 +53,7 @@ namespace Taxi_Management_System
         }
 
         //Client Registeration
-        public void ClientRegister(Client Reg, string confirm)
+        public bool ClientRegister(Client Reg, string confirm)
         {
             if (!string.IsNullOrEmpty(Reg.ClientName) && !string.IsNullOrEmpty(Reg.ClientUsername)
                 && !string.IsNullOrEmpty(Reg.ClientPassword) && !string.IsNullOrEmpty(confirm))
@@ -62,27 +62,29 @@ namespace Taxi_Management_System
                 {
                     if (ClientGlobals.ClientMap.ContainsKey(Reg.ClientUsername))
                     {
-                        MessageBox.Show("used user name, please write another one");
+                        MessageBox.Show("Username is taken, please choose another one.");
+                        return false;
                     }
                     else
                     {
                         Reg.ClientID = ((ClientGlobals.ClientMap.Count) + 1).ToString();
                         ClientGlobals.ClientMap.Add(Reg.ClientUsername, Reg);
                         ClientGlobals.NewClients.Add(Reg.ClientUsername, Reg);
-                        MessageBox.Show("Registration Completed successfully");
+                        MessageBox.Show("Registration completed successfully.");
+                        return true;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Confirm password doesn’t match password ");
+                    MessageBox.Show("Confirm Password field doesn't mattch the Password field.");
+                    return false;
                 }
             }
             else
             {
-                MessageBox.Show("Please fill the empty text boxes");
-            }
-
-            
+                MessageBox.Show("Please fill the empty fields.");
+                return false;
+            }   
         }
 
         public void ReserveTaxi(string clientUsername, string From_ , string To_ )
