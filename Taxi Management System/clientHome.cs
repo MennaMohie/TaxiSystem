@@ -40,7 +40,7 @@ namespace Taxi_Management_System
             //    this.Hide();
             //}
 
-            RequestDriverInfo request = new RequestDriverInfo();
+            RequestTaxiInfo request = new RequestTaxiInfo();
             request.Show();
             this.Hide();
         }

@@ -118,11 +118,19 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="RequestDriverInfo.cs">
+    <Compile Include="RequestTaxiInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RequestDriverInfo.Designer.cs">
-      <DependentUpon>RequestDriverInfo.cs</DependentUpon>
+    <Compile Include="RequestTaxiInfo.Designer.cs">
+      <DependentUpon>RequestTaxiInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="request_taxiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="request_taxiForm.Designer.cs">
+      <DependentUpon>request_taxiForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Trip.cs" />
     <Compile Include="ViewReports_Admin.cs">
@@ -171,11 +179,13 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RequestDriverInfo.resx">
-      <DependentUpon>RequestDriverInfo.cs</DependentUpon>
+    <EmbeddedResource Include="RequestTaxiInfo.resx">
+      <DependentUpon>RequestTaxiInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="request_taxiForm.resx">
       <DependentUpon>request_taxiForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>request_taxiForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewReports_Admin.resx">
       <DependentUpon>ViewReports_Admin.cs</DependentUpon>

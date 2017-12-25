@@ -1,6 +1,6 @@
 ﻿namespace Taxi_Management_System
 {
-    partial class RequestDriverInfo
+    partial class RequestTaxiInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(100, 133);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
@@ -48,7 +49,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 234);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(111, 242);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 19);
@@ -78,17 +80,19 @@
             this.buttonClientRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonClientRequest.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClientRequest.ForeColor = System.Drawing.Color.White;
-            this.buttonClientRequest.Location = new System.Drawing.Point(193, 364);
+            this.buttonClientRequest.Location = new System.Drawing.Point(206, 358);
             this.buttonClientRequest.Name = "buttonClientRequest";
             this.buttonClientRequest.Size = new System.Drawing.Size(161, 56);
             this.buttonClientRequest.TabIndex = 4;
             this.buttonClientRequest.Text = "Request";
             this.buttonClientRequest.UseVisualStyleBackColor = false;
+            this.buttonClientRequest.Click += new System.EventHandler(this.buttonClientRequest_Click_1);
             // 
-            // RequestDriverInfo
+            // RequestTaxiInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.buttonClientRequest);
             this.Controls.Add(this.to);
@@ -99,9 +103,9 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RequestDriverInfo";
+            this.Name = "RequestTaxiInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Request Driver";
+            this.Text = "Request taxi";
             this.ResumeLayout(false);
             this.PerformLayout();
 

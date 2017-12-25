@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Taxi_Management_System
 {
-    public partial class RequestDriverInfo : Form
+    public partial class RequestTaxiInfo : Form
     {
-        public RequestDriverInfo()
+        public RequestTaxiInfo()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace Taxi_Management_System
         private void buttonClientRequest_Click(object sender, EventArgs e)
         {
             Program.driver.RecieveRequest(DriverGlobals.FreeDrivers.First(),ClientGlobals.ClientMap[Login.currentUsername]);
+        }
+
+        private void buttonClientRequest_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
