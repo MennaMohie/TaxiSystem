@@ -33,7 +33,8 @@ namespace Taxi_Management_System
 
         private void buttonViewReports_Click(object sender, EventArgs e)
         {
-           
+            ViewReports_Admin reports = new ViewReports_Admin();
+            reports.Show();
             this.Hide();
         }
 

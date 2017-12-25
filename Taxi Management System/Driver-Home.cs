@@ -24,7 +24,7 @@ namespace Taxi_Management_System
 
         private void buttonDriverChangeStatus_Click(object sender, EventArgs e)
         {
-            Program.driver.ChangeStatus(Program.driver.DriverName);
+            Program.driver.ChangeStatus(Login.currentUsername);
             MessageBox.Show("The status is changed");
         }
 

@@ -39,6 +39,10 @@ namespace Taxi_Management_System
             //    request.Show();
             //    this.Hide();
             //}
+
+            RequestDriverInfo request = new RequestDriverInfo();
+            request.Show();
+            this.Hide();
         }
 
         private void clientHome_FormClosing(object sender, FormClosingEventArgs e)

@@ -34,7 +34,11 @@ namespace Taxi_Management_System
         //Filling the map of drivers
         public void FillDriverMap()
         {
-            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
+            //Mohie
+            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
+
+            //Eman
+            StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
             //StreamReader Stream = new StreamReader("Drivers.txt");
 
@@ -55,6 +59,9 @@ namespace Taxi_Management_System
 
                 DriverGlobals.DriverMap.Add(tempDriver.DriverUsername, tempDriver);
 
+                                if (tempDriver.Status == "1")
+                    DriverGlobals.FreeDrivers.Enqueue(DriverGlobals.DriverMap[tempDriver.DriverUsername]);
+
                 Line = Stream.ReadLine();
             }
 
@@ -74,16 +81,15 @@ namespace Taxi_Management_System
                 DriverGlobals.DriverMap[name].Status = "0";
             }
         }
-
+        
         //Recieving a request
         public void RecieveRequest(Driver FreeDriver_, Client Customer)
         {
             Trip TempTrip = new Trip();
             FreeDriver_.ChangeStatus(FreeDriver_.DriverUsername);
             TempTrip.ClientName = Customer.ClientName;
-            TempTrip.From = "hakhodha mn textbox";
-            TempTrip.To = "hakhodha mn textbox ely taht ely foo'";
-            TempTrip.Date = DateTime.Today;
+            TempTrip.From = "";
+            TempTrip.To = "";
             DriverTrip_.Add(TempTrip);
 
             //////////////////////////Send trip data to the admin List
