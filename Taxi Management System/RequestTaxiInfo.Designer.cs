@@ -42,7 +42,7 @@
             this.label1.Location = new System.Drawing.Point(100, 133);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 19);
+            this.label1.Size = new System.Drawing.Size(69, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "From:";
             // 
@@ -53,7 +53,7 @@
             this.label2.Location = new System.Drawing.Point(111, 242);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 19);
+            this.label2.Size = new System.Drawing.Size(41, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "To:";
             // 
@@ -62,7 +62,7 @@
             this.from.Location = new System.Drawing.Point(193, 133);
             this.from.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.from.Name = "from";
-            this.from.Size = new System.Drawing.Size(246, 27);
+            this.from.Size = new System.Drawing.Size(246, 32);
             this.from.TabIndex = 2;
             // 
             // to
@@ -70,7 +70,7 @@
             this.to.Location = new System.Drawing.Point(193, 234);
             this.to.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.to.Name = "to";
-            this.to.Size = new System.Drawing.Size(246, 27);
+            this.to.Size = new System.Drawing.Size(246, 32);
             this.to.TabIndex = 3;
             // 
             // buttonClientRequest
@@ -78,9 +78,10 @@
             this.buttonClientRequest.BackColor = System.Drawing.Color.Black;
             this.buttonClientRequest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClientRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonClientRequest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonClientRequest.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClientRequest.ForeColor = System.Drawing.Color.White;
-            this.buttonClientRequest.Location = new System.Drawing.Point(206, 358);
+            this.buttonClientRequest.Location = new System.Drawing.Point(209, 321);
             this.buttonClientRequest.Name = "buttonClientRequest";
             this.buttonClientRequest.Size = new System.Drawing.Size(161, 56);
             this.buttonClientRequest.TabIndex = 4;
@@ -90,9 +91,10 @@
             // 
             // RequestTaxiInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.buttonClientRequest);
             this.Controls.Add(this.to);
