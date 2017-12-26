@@ -88,32 +88,7 @@ namespace Taxi_Management_System
             AdminGlobals.AllTrips.Add(Trip);
         }
 
-        public void viewtrips()
-        {
-            int num_trips;
-            num_trips = AdminGlobals.AllTrips.Count;
-            DataTable Trips = new DataTable();
-            Trips.Columns.Add("Client Name");
-            Trips.Columns.Add("Driver Name");
-            Trips.Columns.Add("From");
-            Trips.Columns.Add("To");
-            Trips.Columns.Add("Date");
-
-            DataRow NewTrip;
-            for (int i = 0; i < num_trips; i++)
-            {
-                NewTrip = Trips.NewRow();
-                NewTrip["Client Name"] = AdminGlobals.AllTrips[i].ClientName;
-                NewTrip["Driver Name"] = AdminGlobals.AllTrips[i].DriverName;
-                NewTrip["From"] = AdminGlobals.AllTrips[i].From;
-                NewTrip["To"] = AdminGlobals.AllTrips[i].To;
-                NewTrip["Date"] = AdminGlobals.AllTrips[i].Date;
-                Trips.Rows.Add(NewTrip);
-            }
-            //DGV.DataSource = Trips;
-
-
-        }
+       
         public void AddNewDriver(string uname, string password, string name, string driverid, string carplatenumber, string salary, string status)
         {
             Driver tempdriver = new Driver();
