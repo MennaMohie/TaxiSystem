@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAdminTrips = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminTrips)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAdminTrips
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 161);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(623, 327);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewAdminTrips.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewAdminTrips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdminTrips.Location = new System.Drawing.Point(27, 161);
+            this.dataGridViewAdminTrips.Name = "dataGridViewAdminTrips";
+            this.dataGridViewAdminTrips.Size = new System.Drawing.Size(623, 327);
+            this.dataGridViewAdminTrips.TabIndex = 0;
+            this.dataGridViewAdminTrips.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAdminTrips_CellContentClick);
             // 
             // label1
             // 
@@ -62,14 +63,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewAdminTrips);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ViewReports_Admin";
             this.Text = "View Reports";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdminTrips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +78,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAdminTrips;
         private System.Windows.Forms.Label label1;
     }
 }
