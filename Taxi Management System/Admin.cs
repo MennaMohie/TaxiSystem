@@ -27,10 +27,10 @@ namespace Taxi_Management_System
             //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //mohie
-            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //Eman
-            StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
+            //StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Admin.txt");
 
             //StreamReader Stream = new StreamReader("Admin.txt");
 
@@ -46,6 +46,36 @@ namespace Taxi_Management_System
                 TempAdmin.AdminPassword = Words[1];
 
                 AdminGlobals.AdminMap[TempAdmin.AdminUsername] = TempAdmin;
+
+                Line = Stream.ReadLine();
+            }
+
+            Stream.Close();
+        }
+
+        public void FillTripsList()
+        {
+            //mohie
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Trips.txt");
+
+            char[] Delimeters = {' '};
+            string Line = Stream.ReadLine();
+            while (!string.IsNullOrWhiteSpace(Line))
+            {
+                Trip tempTrip = new Trip();
+                string[] Words = Line.Split(Delimeters);
+
+                
+                tempTrip.ClientUsername = Words[0];
+                tempTrip.ClientName = ClientGlobals.ClientMap[tempTrip.ClientUsername].ClientName;
+                tempTrip.DriverUserName = Words[1];
+                tempTrip.DriverName = DriverGlobals.DriverMap[tempTrip.DriverUserName].DriverName;
+                tempTrip.From = Words[2];
+                tempTrip.To = Words[3];
+                tempTrip.Date = Words[4] + ' ' + Words[5] + ' ' + Words[6];
+                tempTrip.Status = Words[7];
+
+                AdminGlobals.AllTrips.Add(tempTrip);
 
                 Line = Stream.ReadLine();
             }
@@ -95,7 +125,6 @@ namespace Taxi_Management_System
             tempdriver.Salary = salary;
             tempdriver.Status = status;
             DriverGlobals.DriverMap[uname] = tempdriver;
-            DriverGlobals.NewDrivers[uname] = tempdriver;
         }
 
         public void AddNewCar(string PlateNumber, string Color, string Year, string Model)

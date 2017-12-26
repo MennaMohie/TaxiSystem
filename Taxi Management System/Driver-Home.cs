@@ -30,7 +30,14 @@ namespace Taxi_Management_System
 
         private void buttonDriverRequests_Click(object sender, EventArgs e)
         {
-
+            for (int i=0; i<AdminGlobals.AllTrips.Count(); i++)
+            {
+                if (AdminGlobals.AllTrips[i].DriverUserName == Login.currentUsername && AdminGlobals.AllTrips[i].Status == "Pending")
+                {
+                    MessageBox.Show("Client's Name: " + AdminGlobals.AllTrips[i].ClientName + "\nClient's Username: " + AdminGlobals.AllTrips[i].ClientUsername + "\nFrom: " + AdminGlobals.AllTrips[i].From + "\nTo: " + AdminGlobals.AllTrips[i].To);
+                    AdminGlobals.AllTrips[i].Status = "Accepted";
+                }
+            }
         }
 
         private void Driver_Home_FormClosing(object sender, FormClosingEventArgs e)

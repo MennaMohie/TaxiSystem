@@ -87,7 +87,7 @@
             this.buttonClientRequest.TabIndex = 4;
             this.buttonClientRequest.Text = "Request";
             this.buttonClientRequest.UseVisualStyleBackColor = false;
-            this.buttonClientRequest.Click += new System.EventHandler(this.buttonClientRequest_Click_1);
+            this.buttonClientRequest.Click += new System.EventHandler(this.buttonClientRequest_Click);
             // 
             // RequestTaxiInfo
             // 
@@ -108,6 +108,7 @@
             this.Name = "RequestTaxiInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Request taxi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RequestTaxiInfo_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

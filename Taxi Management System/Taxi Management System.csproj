@@ -124,9 +124,7 @@
     <Compile Include="RequestTaxiInfo.Designer.cs">
       <DependentUpon>RequestTaxiInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="request_taxiForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="request_taxiForm.cs" />
     <Compile Include="request_taxiForm.Designer.cs">
       <DependentUpon>request_taxiForm.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -215,6 +213,7 @@
     <Content Include="Text Files\Cars.txt" />
     <Content Include="Text Files\Clients.txt" />
     <Content Include="Text Files\Drivers.txt" />
+    <Content Include="Text Files\Trips.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

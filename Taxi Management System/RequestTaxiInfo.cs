@@ -19,12 +19,13 @@ namespace Taxi_Management_System
 
         private void buttonClientRequest_Click(object sender, EventArgs e)
         {
-            Program.driver.RecieveRequest(DriverGlobals.FreeDrivers.First(),ClientGlobals.ClientMap[Login.currentUsername]);
+            //Program.driver.RecieveRequest(DriverGlobals.FreeDrivers.First(),ClientGlobals.ClientMap[Login.currentUsername]);
+            Program.client.ReserveTaxi(Login.currentUsername, from.Text, to.Text);
         }
 
-        private void buttonClientRequest_Click_1(object sender, EventArgs e)
+        private void RequestTaxiInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Program.updateFiles();
         }
     }
 }

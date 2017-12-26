@@ -1,5 +1,5 @@
 mennaawad 123 Menna Awad 1 3000 0
-mennamohie 111 Menna Mohie 2 3000 1
+mennamohie 111 Menna Mohie 2 3000 0
 youssefmaghraby 000 Youssef Maghraby 3 3000 0
 olaadel 12345 Ola Adel 4 3000 0
 farahmohamed 695347 Farah Mohamed 5 3000 1
@@ -8,4 +8,5 @@ nourhankhaled 148536 Nourhan Khaled 7 3000 1
 mainour 349618 Mai Nour 8 3000 0
 mennamagdy 065795 Menna Magdy 9 3000 1
 mahmoudmohamed 124391 Mahmoud Mohamed 10 3000 1
-omarmohamed 1029 Omar Mohamed 11 100000000000000000 0 
+omarmohamed 1029 Omar Mohamed 11 100000000000000000 0
+soso 1001 Soaad Hosny 12 20000000 1

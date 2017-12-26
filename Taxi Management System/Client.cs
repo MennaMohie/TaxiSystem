@@ -31,11 +31,11 @@ namespace Taxi_Management_System
         public void FillCientMap()
         {
             //Mohie
-            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
             //StreamReader Stream = new StreamReader("Clients.txt");
 
             //Eman
-            StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
+            //StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Clients.txt");
 
             char[] Delimeters = { ' ', ',', '.', ':', '\t' };
             string Line = Stream.ReadLine();
@@ -98,19 +98,28 @@ namespace Taxi_Management_System
             Trip TempTrip = new Trip();
 
             string driverUsername;
-            while(DriverGlobals.FreeDrivers.Count!=0)
+            if (DriverGlobals.FreeDrivers.Count()== 0)
+                MessageBox.Show("We are very sorry, there are currently no available drivers.");
+
+            while(DriverGlobals.FreeDrivers.Count()!=0)
             {
                 driverUsername = DriverGlobals.FreeDrivers.Peek().DriverUsername;
                 if(DriverGlobals.DriverMap[driverUsername].Status=="1")
                 {
-                    MessageBox.Show(@"Reservation complete.
-                                      The Driver's name: " + driverUsername + ".");
-                    DriverGlobals.FreeDrivers.Peek().RecieveRequest(DriverGlobals.FreeDrivers.Peek(), ClientGlobals.ClientMap[clientUsername]);
+                    MessageBox.Show("Reservation complete.\nThe Driver's name: " + DriverGlobals.DriverMap[driverUsername].DriverName + ".");
+                   
                     TempTrip.DriverName = DriverGlobals.FreeDrivers.Peek().DriverName;
+                    TempTrip.ClientName = ClientGlobals.ClientMap[clientUsername].ClientName;
+                    TempTrip.DriverUserName = DriverGlobals.FreeDrivers.Peek().DriverUsername;
+                    TempTrip.ClientUsername = clientUsername;
                     TempTrip.From = From_;
                     TempTrip.To = To_;
-                    TempTrip.Date = DateTime.Today;
+                    TempTrip.Status = "Pending";
+                    TempTrip.Date = DateTime.Today.ToString();
                     ClientTrip_.Add(TempTrip);
+                    DriverGlobals.DriverMap[driverUsername].DriverTrip_.Add(TempTrip);
+                    DriverGlobals.DriverMap[driverUsername].Status = "0";
+                    AdminGlobals.AllTrips.Add(TempTrip);
                     DriverGlobals.FreeDrivers.Dequeue();
                     break;
                 }
@@ -124,7 +133,7 @@ namespace Taxi_Management_System
         public void ViewClientHistory( string uname)
         {
             int num_trips;
-            num_trips=  ClientGlobals.ClientMap[uname].ClientTrip_.Count;
+            num_trips = ClientGlobals.ClientMap[uname].ClientTrip_.Count;
             for (int i = 0; i < num_trips; i++)
             {
                 Console.WriteLine(ClientGlobals.ClientMap[uname].ClientTrip_[i].DriverName);

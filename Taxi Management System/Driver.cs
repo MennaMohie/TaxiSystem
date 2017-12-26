@@ -15,8 +15,6 @@ namespace Taxi_Management_System
     {
         public static Queue<Driver> FreeDrivers = new Queue<Driver>();
         public static Dictionary<string, Driver> DriverMap = new Dictionary<string, Driver>();
-        public static Dictionary<string, Driver> NewDrivers = new Dictionary<string, Driver>();
-
     }
 
     public class Driver
@@ -28,17 +26,17 @@ namespace Taxi_Management_System
         public string CarID;
         public string Salary;
         public string Status;
-        List<Trip> DriverTrip_ = new List<Trip>();
+        public List<Trip> DriverTrip_ = new List<Trip>();
 
         //Functions
         //Filling the map of drivers
         public void FillDriverMap()
         {
             //Mohie
-            //StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
+            StreamReader Stream = new StreamReader(@"C:\Users\Menna\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
             //Eman
-            StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
+            //StreamReader Stream = new StreamReader(@"C:\Users\Eman\Source\Repos\TaxiSystem\Taxi Management System\Text Files\Drivers.txt");
 
             //StreamReader Stream = new StreamReader("Drivers.txt");
 
@@ -59,7 +57,7 @@ namespace Taxi_Management_System
 
                 DriverGlobals.DriverMap.Add(tempDriver.DriverUsername, tempDriver);
 
-                                if (tempDriver.Status == "1")
+                if (tempDriver.Status == "1")
                     DriverGlobals.FreeDrivers.Enqueue(DriverGlobals.DriverMap[tempDriver.DriverUsername]);
 
                 Line = Stream.ReadLine();

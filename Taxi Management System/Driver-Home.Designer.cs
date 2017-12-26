@@ -78,7 +78,7 @@
             this.buttonDriverRequests.Name = "buttonDriverRequests";
             this.buttonDriverRequests.Size = new System.Drawing.Size(255, 90);
             this.buttonDriverRequests.TabIndex = 3;
-            this.buttonDriverRequests.Text = "Available Requests";
+            this.buttonDriverRequests.Text = "Receive Request";
             this.buttonDriverRequests.UseVisualStyleBackColor = false;
             this.buttonDriverRequests.Click += new System.EventHandler(this.buttonDriverRequests_Click);
             // 
