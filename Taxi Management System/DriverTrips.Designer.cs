@@ -30,6 +30,7 @@
         {
             this.DriverTripsTable = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.Backbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DriverTripsTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,12 +55,27 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Driver Trips";
             // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.Color.Black;
+            this.Backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Backbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.Location = new System.Drawing.Point(480, 55);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(92, 37);
+            this.Backbutton.TabIndex = 10;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // DriverTrips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DriverTripsTable);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,5 +93,6 @@
 
         private System.Windows.Forms.DataGridView DriverTripsTable;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxsalary = new System.Windows.Forms.TextBox();
             this.textBoxstatus = new System.Windows.Forms.TextBox();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddDriverbutton
@@ -161,6 +162,20 @@
             this.textBoxstatus.TabIndex = 12;
             this.textBoxstatus.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.Color.Black;
+            this.Backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Backbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.Location = new System.Drawing.Point(51, 422);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(176, 53);
+            this.Backbutton.TabIndex = 13;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // AddDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -168,6 +183,7 @@
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.textBoxstatus);
             this.Controls.Add(this.textBoxsalary);
             this.Controls.Add(this.label6);
@@ -208,5 +224,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxsalary;
         private System.Windows.Forms.TextBox textBoxstatus;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

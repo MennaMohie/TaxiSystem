@@ -37,6 +37,7 @@
             this.textBoxcaryear = new System.Windows.Forms.TextBox();
             this.textBoxcarmodel = new System.Windows.Forms.TextBox();
             this.AddDriverbutton = new System.Windows.Forms.Button();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +123,20 @@
             this.AddDriverbutton.UseVisualStyleBackColor = false;
             this.AddDriverbutton.Click += new System.EventHandler(this.AddDriverbutton_Click);
             // 
+            // Backbutton
+            // 
+            this.Backbutton.BackColor = System.Drawing.Color.Black;
+            this.Backbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Backbutton.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.Location = new System.Drawing.Point(64, 398);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(176, 53);
+            this.Backbutton.TabIndex = 9;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = false;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // AddCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -129,6 +144,7 @@
             this.BackgroundImage = global::Taxi_Management_System.Properties.Resources.LogInBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 567);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.AddDriverbutton);
             this.Controls.Add(this.textBoxcarmodel);
             this.Controls.Add(this.textBoxcaryear);
@@ -160,5 +176,6 @@
         private System.Windows.Forms.TextBox textBoxcaryear;
         private System.Windows.Forms.TextBox textBoxcarmodel;
         private System.Windows.Forms.Button AddDriverbutton;
+        private System.Windows.Forms.Button Backbutton;
     }
 }
