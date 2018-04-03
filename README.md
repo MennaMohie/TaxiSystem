@@ -35,9 +35,9 @@ Assumes a taxi company that manages client reservation online such that reservat
 2) Password
 
 ☒ Admin Functionalities:
-5) Log in.
-6) Add new driver.
-7) Add new car.
-8) View Report of all trips.
+1) Log in.
+2) Add new driver.
+3) Add new car.
+4) View Report of all trips.
 
 C# Windows Forms Application and Data Structures.
